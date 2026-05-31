@@ -1,0 +1,57 @@
+plugins {
+//    id 'org.springframework.boot' version '3.1.2'
+//    id 'io.spring.dependency-management' version '1.1.2'
+    id 'java'
+    id "io.freefair.lombok" version "6.6.1"
+}
+
+repositories {
+    mavenCentral()
+}
+
+subprojects {
+    apply plugin: "java"
+    apply plugin: 'groovy'
+    apply plugin: 'io.freefair.lombok'
+
+    group = "com.example"
+    version = "1.0"
+
+    sourceCompatibility = '17'
+
+    dependencies {
+        compileOnly 'org.projectlombok:lombok:1.18.8'
+        annotationProcessor 'org.projectlombok:lombok:1.18.8'
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+    compileJava {
+        options.compilerArgs.addAll(['-parameters'])
+    }
+
+    test {
+        useJUnitPlatform()
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+project(":boundary") {
+    dependencies {
+        implementation project(":logic")
+        implementation project(":api")
+    }
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}
+
+// Configure the main class for Spring Boot

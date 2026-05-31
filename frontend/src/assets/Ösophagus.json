@@ -1,0 +1,3205 @@
+{
+  "id": "Esophagectomy",
+  "heading": "Robot-assisted Esophagectomy",
+  "subprocesses": [
+    {
+      "order": 1,
+      "name": "Abdominal Part",
+      "elements": [
+        {
+          "id": "StartEvent_1",
+          "type": "START_EVENT",
+          "inputType": "CHECKBOX",
+          "name": "Esophagectomy (Abdominal Part)",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1ba6zz0",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1ba6zz0",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "heading: Preparation for Abdominal Part",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0nnvnan",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0nnvnan",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Induction of anaesthesia",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0kcvg7m",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0kcvg7m",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Patient positioning (supine)",
+          "textAnnotation": "Supine position",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_09qy21q",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_09qy21q",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Disinfection and sterile dressing",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_15k79ho",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_15k79ho",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Surgical team time-out",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_18ftu4f",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_18ftu4f",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Pneumoperitoneum",
+          "textAnnotation": "Left subcostal access with Verres needle, To ~ 15 mmHg",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_11mn6vg",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_11mn6vg",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Marking of ports’ positions",
+          "textAnnotation": "3x 8 mm and 1x 12 mm ports in a line three cross fingers under the costal arch (for R2, 8mm: on the midline slightly above or at the umbilicus; for R3, 8 mm: on the left mid-clavicular line (MCL) at least 8 cm away from R2 on a straight line; for R4, 8 mm: as far left lateral from R3 as possible; for R1, 12 mm: on right MCL at least 8 cm away from R2); 1x 12-mm assisting port triangulated midway inferior between R2 and R1; 1x 5 mm port for liver retractor subcostally on the right MCL",
+          "pathIds": [],
+          "data": [
+            {
+              "id": "DataObject_11hjoz5",
+              "name": "Abdominal_Part1.PNG"
+            }
+          ],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0abce2f",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0abce2f",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Instillation of local anesthesia",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0yji4pv",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0yji4pv",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Placement of port for endoscope",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1c62fss",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1c62fss",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Initial diagnostic laparoscopy",
+          "textAnnotation": "Rule out peritoneal carcinomatosis or liver metastases",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_11p9mls"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0428cdn",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_11p9mls",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_11p9mls",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Suspected peritoneal carcinomatosis or liver metastasis",
+          "pathIds": [
+            "Event_11p9mls"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1t6ixs0",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1t6ixs0",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Take sample",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_11p9mls"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1iyiu4m",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1iyiu4m",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Decided to continue surgery",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_11p9mls"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0428cdn",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0428cdn",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1ohuds1",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1ohuds1",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Placement of other ports",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0b9q2rr",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0b9q2rr",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Liver retraction",
+          "textAnnotation": "Elevation of the right liver lobe",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0qays57",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0qays57",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Patient positioning (15° reverse Trendelenburg)",
+          "textAnnotation": "Table in reverse Trendelenburg position (~ 15°) and a ~ 10° rotation to the right",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0op0sy6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0op0sy6",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Da Vinci docking and targeting the hiatus",
+          "textAnnotation": "R1: Fenestrated bipolar forceps, R2: 30° endoscope, R3: Permanent cautery hook or EndoWrist® Vessel Sealer, R4: Tip-up fenestrated grasper",
+          "pathIds": [],
+          "data": [
+            {
+              "id": "DataObject_1ukicha",
+              "name": "Abdominal_Part2.PNG"
+            }
+          ],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_00r9kwi",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_00r9kwi",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "heading: Gastric and Distal Esophagus Mobilisation",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1epekwv",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1epekwv",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Are disturbing adhesions present?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_116g82r",
+              "pathDescription": "Yes"
+            },
+            {
+              "id": "Gateway_04z65tn",
+              "pathDescription": "No"
+            }
+          ]
+        },
+        {
+          "id": "Activity_116g82r",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Detachment of abdominal adhesions",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_116g82r"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_09b9vq9"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0kcyrww",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_09b9vq9",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_09b9vq9",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Too many abdominal adhesions",
+          "pathIds": [
+            "Activity_116g82r",
+            "Event_09b9vq9"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0ht2mkl",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0ht2mkl",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Conversion to an open procedure",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_116g82r",
+            "Event_09b9vq9"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0kcyrww",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0kcyrww",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_116g82r"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_04z65tn",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_04z65tn",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0zddy8n",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0zddy8n",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Incision of lesser omentum up to right crus of diaphragm",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_18y1g0w",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_18y1g0w",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Dissection of hiatus and gastrophrenic ligament",
+          "textAnnotation": "To the upper pole of the spleen including upper small gastric vessels",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_1qr61h9"
+          ],
+          "children": [
+            {
+              "id": "Gateway_1d71k2m",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1qr61h9",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1qr61h9",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Persisting hiatal hernia",
+          "pathIds": [
+            "Event_1qr61h9"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1d71k2m",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1d71k2m",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1e0qpxh",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1e0qpxh",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Dissection of greater omentum with a medial to left lateral approach",
+          "textAnnotation": "Dissection until cardial notch is reached,Caution:Preservation of the gastroepiploic vascular arcade",
+          "pathIds": [],
+          "data": [
+            {
+              "id": "DataObject_098xyce",
+              "name": "Abdominal_Part3.PNG"
+            }
+          ],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1gimuds",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1gimuds",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Dissection and ligation of retro-gastric adhesions and short gastric arteries",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_0wrhrzv"
+          ],
+          "children": [
+            {
+              "id": "Gateway_10fkw0k",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0wrhrzv",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0wrhrzv",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of bleeding",
+          "pathIds": [
+            "Event_0wrhrzv"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Gateway_10fkw0k",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Do you want to perform the step\"Resection of splenic artery lymph nodes\"?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_13lqn8o",
+              "pathDescription": "Now"
+            },
+            {
+              "id": "Gateway_0z2gmw0",
+              "pathDescription": "Later"
+            }
+          ]
+        },
+        {
+          "id": "Activity_13lqn8o",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Resection of splenic artery lymph nodes",
+          "textAnnotation": "Resection of lymph node station 17",
+          "pathIds": [
+            "Activity_13lqn8o"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_0erpv1e"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0z2gmw0",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0erpv1e",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0erpv1e",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of bleeding",
+          "pathIds": [
+            "Activity_13lqn8o",
+            "Event_0erpv1e"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Gateway_0z2gmw0",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1n3lo2z",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1n3lo2z",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Dissection of greater omentum with a medial to right lateral approach and mobilization of hepatic flexure",
+          "textAnnotation": "Dissection until duodenum is visible, Mobilization of the hepatic flexure as far as needed to allow tension free movement of the pylorus, Caution: Preservation of the right gastroepiploic vascular arcade",
+          "pathIds": [],
+          "data": [
+            {
+              "id": "DataObject_1n64tfb",
+              "name": "Abdominal_Part4.PNG"
+            }
+          ],
+          "eventIds": [
+            "Event_1jozd7r"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0ny0vgm",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1jozd7r",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1jozd7r",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Injuring the right gastroepiploic vascular arcade",
+          "pathIds": [
+            "Event_1jozd7r"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0rhxm2a",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0rhxm2a",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Colon interposition",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_1jozd7r"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0ny0vgm",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0ny0vgm",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_16opyli",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_16opyli",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Do you want to perform the  step\"Dorsal gastrolysis until gastroduodenal artery is reached\"?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_110a9xv",
+              "pathDescription": "Now"
+            },
+            {
+              "id": "Gateway_1iqocdc",
+              "pathDescription": "Later"
+            }
+          ]
+        },
+        {
+          "id": "Activity_110a9xv",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Dorsal gastrolysis until gastroduodenal artery is reached",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_110a9xv"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1iqocdc",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1iqocdc",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_09cl5un",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_09cl5un",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Dissection and ligation of right gastric artery",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_1muazyl"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0t6sfya",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1muazyl",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1muazyl",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of bleeding",
+          "pathIds": [
+            "Event_1muazyl"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Gateway_0t6sfya",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Does the patient have a gallbladder?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_09fr1vh",
+              "pathDescription": "Yes"
+            },
+            {
+              "id": "Gateway_11uwh6v",
+              "pathDescription": "No"
+            }
+          ]
+        },
+        {
+          "id": "Gateway_09fr1vh",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Do you want to perform the step\"Cholecystectomy\"?",
+          "pathIds": [
+            "Gateway_09fr1vh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1ktp5dy",
+              "pathDescription": "Later"
+            },
+            {
+              "id": "Activity_15feqr2",
+              "pathDescription": "Now"
+            }
+          ]
+        },
+        {
+          "id": "Activity_15feqr2",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Cholecystectomy",
+          "textAnnotation": "Caution:Do not injure the right hepatic artery",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Activity_15feqr2"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_0z23xel"
+          ],
+          "children": [
+            {
+              "id": "Gateway_1ktp5dy",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0z23xel",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0z23xel",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of  njuring the right hepatic artery",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Activity_15feqr2",
+            "Event_0z23xel"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Gateway_1ktp5dy",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1ktp5dy"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_11uwh6v",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_11uwh6v",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_05ephrs",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_05ephrs",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "heading:  Gastric Tube Construction and Lymphadenectomy",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1xgwmkc",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1xgwmkc",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Gastric tube construction",
+          "textAnnotation": "Start at the Crow`s foot stapling (DaVinci left hand) the stomach vertical to the small gastric curvature, then stapling multiple times parallel to the great gastric curvature to create the initial part of the tube; 4,5 cm diameter",
+          "pathIds": [
+            "Gateway_09fr1vh"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_1salmg2"
+          ],
+          "children": [
+            {
+              "id": "Gateway_1crmzzu",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1salmg2",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1salmg2",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of bleeding",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Event_1salmg2"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Gateway_1crmzzu",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Do you want to perform the step\"Dorsal gastrolysis until gastroduodenal artery is reached\"?",
+          "pathIds": [
+            "Gateway_09fr1vh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0gc9y3c",
+              "pathDescription": "Now"
+            },
+            {
+              "id": "Gateway_1100dmh",
+              "pathDescription": "Done before"
+            }
+          ]
+        },
+        {
+          "id": "Activity_0gc9y3c",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Dorsal gastrolysis until gastroduodenal artery is reached",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Activity_0gc9y3c"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1100dmh",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1100dmh",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1rqroz6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1rqroz6",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Resection of lymph nodes along hepatoduodenal ligament and common hepatic artery",
+          "textAnnotation": "Resection of lymph node stations 19 and 18, Resection of lymph nodes along hepatoduodenal ligament until portal vein",
+          "pathIds": [
+            "Gateway_09fr1vh"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_02rzykz",
+            "Event_0s7pc9x",
+            "Event_061ks1f"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0jsmk9s",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_02rzykz",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0s7pc9x",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_061ks1f",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_061ks1f",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Common hepatic artery lymph nodes",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Event_061ks1f"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_0s7pc9x",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of bleeding",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Event_0s7pc9x"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_02rzykz",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Hepatoduodenal ligament lymph nodes",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Event_02rzykz"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Gateway_0jsmk9s",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Do you want to perform the step\"Resection of splenic artery lymph nodes\"?",
+          "pathIds": [
+            "Gateway_09fr1vh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1n7jhe5",
+              "pathDescription": "Done before"
+            },
+            {
+              "id": "Activity_0rk1imj",
+              "pathDescription": "Now"
+            }
+          ]
+        },
+        {
+          "id": "Activity_0rk1imj",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Resection of splenic artery lymph nodes",
+          "textAnnotation": "Resection of lymph node station 17",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Activity_0rk1imj"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_001dzra"
+          ],
+          "children": [
+            {
+              "id": "Gateway_1n7jhe5",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_001dzra",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_001dzra",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of bleeding",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Activity_0rk1imj",
+            "Event_001dzra"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Gateway_1n7jhe5",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1oimphe",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1oimphe",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Ligation of coronary vein",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_1hvi1y4"
+          ],
+          "children": [
+            {
+              "id": "Activity_0the8nz",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1hvi1y4",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1hvi1y4",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of bleeding",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Event_1hvi1y4"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_0the8nz",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Resection of left gastric artery lymph nodes and ligation of left gastric artery",
+          "textAnnotation": "Resection of lymph node station 15",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [
+            {
+              "id": "DataObject_1geau5t",
+              "name": "Abdominal_Part5.PNG"
+            }
+          ],
+          "eventIds": [
+            "Event_01hd3en"
+          ],
+          "children": [
+            {
+              "id": "Activity_03xrze8",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_01hd3en",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_01hd3en",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of bleeding",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Event_01hd3en"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_03xrze8",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Resection of celiac trunk lymph nodes nodes up to diaphragm",
+          "textAnnotation": "Resection of lymph node station 16",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_0ip2hwy"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0xp0gwa",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0ip2hwy",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0ip2hwy",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of bleeding",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Event_0ip2hwy"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Gateway_0xp0gwa",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Does the patient have a gallbladder?",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_134c0y4",
+              "pathDescription": "Yes"
+            },
+            {
+              "id": "Gateway_0ygxoan",
+              "pathDescription": "No"
+            }
+          ]
+        },
+        {
+          "id": "Activity_134c0y4",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Cholecystectomy",
+          "textAnnotation": "Caution: Do not injure the right hepatic artery",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Activity_134c0y4"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_0ormyaa"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0ygxoan",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0ormyaa",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0ormyaa",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of  injuring the right hepatic artery",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Activity_134c0y4",
+            "Event_0ormyaa"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Gateway_0ygxoan",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1s3v5h5",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1s3v5h5",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Dissection of the gastroesophageal junction from the hiatus resecting lymphatic tissue until aorta is reached dorsally",
+          "textAnnotation": "Resection of paracardial lymph nodes (lymph node station 14 R&L)",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [
+            {
+              "id": "DataObject_0n12djh",
+              "name": "Abdominal_Part6.PNG"
+            }
+          ],
+          "eventIds": [
+            "Event_1hlcx7r"
+          ],
+          "children": [
+            {
+              "id": "Activity_0csi7xc",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1hlcx7r",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1hlcx7r",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Paracardial lymph nodes",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Event_1hlcx7r"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_0csi7xc",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Transhiatal ligation of thoracic duct on the right side of the aorta",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1xbwpqw",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1xbwpqw",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Transhiatal incision of right pleura and pulmonary ligament resecting lymphatic tissue laterally along pleura",
+          "textAnnotation": "Resection of pulmonary ligament lymph nodes (lymph node station 13 R&L) If possible: do not open the left pleura to prevent hiatal hernias",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_0e5n8r8",
+            "Event_0f3rm03"
+          ],
+          "children": [
+            {
+              "id": "Activity_1796zib",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0e5n8r8",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0f3rm03",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0f3rm03",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Pulmonary ligament lymph nodes",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Event_0f3rm03"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_0e5n8r8",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of injuring the heart, the aorta",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Event_0e5n8r8"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_1796zib",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Ventrally dissection along pericardium resecting lymphatic tissue",
+          "textAnnotation": "Partly resection of lower mediastinal paraesophageal lymph nodes (lymph node station 12 R&L)",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_0fcuonv",
+            "Event_0ryq0td"
+          ],
+          "children": [
+            {
+              "id": "Activity_1v3yve1",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0fcuonv",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0ryq0td",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0ryq0td",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Lower mediastinal paraesohageal lymph nodes",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Event_0ryq0td"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_0fcuonv",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of injuring the heart",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Event_0fcuonv"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_1v3yve1",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "heading: Completion of Abdominal Part",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_09vvr66",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_09vvr66",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Irrigation and hemostasis",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1lu5id6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1lu5id6",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Da Vinci undocking",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0jxv8fc",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0jxv8fc",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Port removal",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1y3e10p",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1y3e10p",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Does the patient have a lot of fluid at the operative site?",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1wv8n4a",
+              "pathDescription": "Yes"
+            },
+            {
+              "id": "Gateway_12328jz",
+              "pathDescription": "No"
+            }
+          ]
+        },
+        {
+          "id": "Activity_1wv8n4a",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Drainage insertion",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5",
+            "Activity_1wv8n4a"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_12328jz",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_12328jz",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_05yzcx3",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_05yzcx3",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Closure of skin",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1mi80km",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1mi80km",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Sterile bandage",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_09fr1vh",
+            "Gateway_1n7jhe5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Event_0jzz26i",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0jzz26i",
+          "type": "END_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "name": "Thoracic Part",
+      "elements": [
+        {
+          "id": "Event_1xz7r6s",
+          "type": "START_EVENT",
+          "inputType": "CHECKBOX",
+          "name": "Esophagectomy (Thoracic Part)",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0hw7sa5",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0hw7sa5",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "heading: Preparation for Thoracic Part",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_03d155u",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_03d155u",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Patient positioning (left lateral decubitus)",
+          "textAnnotation": "Left lateral decubitus position with the table in a modified prone position\n(~ 45°rotation of the lateral chest)",
+          "pathIds": [],
+          "data": [
+            {
+              "id": "DataObject_0gcbpv4",
+              "name": "Thoracic_Part1.PNG"
+            }
+          ],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_18stp34",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_18stp34",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Single left lung ventilation",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0bwqf6t",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0bwqf6t",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Disinfection and sterile dressing",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [
+            {
+              "id": "DataObject_0sj7ei3",
+              "name": "Thoracic_Part2.PNG"
+            }
+          ],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1ab0dwl",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1ab0dwl",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Marking the ports' positions",
+          "textAnnotation": "For R4 in the 4th intercostal space (ICS), 1 cm medial to the scapula; for R3 in the 6th ICS, slightly more medial than port 4; for R2 in the 8th ICS at the same level as port 4; for R1 on the scapular line or slightly posterior in the 10th ICS. A 6–10- cm spacing is maintained between ports; for the assisting port in the 9th ICS triangulated between R1 and R2 (this would be the site for specimen removal and entrance of circular stapler) or triangulated between R3 and R4 in the 5th ICS",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0lrietb",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0lrietb",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Instillation of local anesthesia",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0bodz53",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0bodz53",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Placement of 12 mm assisting port",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1ay7cun",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1ay7cun",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "CO2 Insufflation",
+          "textAnnotation": "To ~ 8 mmHg",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0r8a0hy",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0r8a0hy",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Inspection of thoracic cavity",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_1xfuyow"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0ivituv",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1xfuyow",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1xfuyow",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Lung texture affected",
+          "pathIds": [
+            "Event_1xfuyow"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1mnfezs",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1mnfezs",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Intervention",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_1xfuyow"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0ivituv",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0ivituv",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1fuhzev",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1fuhzev",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Placement of other ports",
+          "textAnnotation": "4x 8 mm ports for robotic arms",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0sz4ys5",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0sz4ys5",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Da Vinci docking and targeting the azygos vein arcus",
+          "textAnnotation": "R1: Tip-up fenestrated grasper, R2: Fenestrated bipolar forceps, R3: 30° endoscope, R4: Permanent cautery hook or Monopolar curved scissors or EndoWrist® Vessel Sealer",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_06iatyc",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_06iatyc",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "heading: Dissection of Esophagus",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0crsria",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0crsria",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Incision of mediastinal pleura above and below azygos vein arcus",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_045wq40",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_045wq40",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Ligation of azygos vein arcus to superior vena cava",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_1y084gx"
+          ],
+          "children": [
+            {
+              "id": "Activity_1gojfj9",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1y084gx",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1y084gx",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of injuring the azygos vein",
+          "pathIds": [
+            "Event_1y084gx"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_1gojfj9",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Incision of pleura dorsally along azygos vein with lymphadenectomy along the aorta to the hiatus",
+          "textAnnotation": "From 3-4 cm above the azygos vein arcus to the hiatus., Resection of middle and lower mediastinal paraesophageal lymph nodes (lymph node stations 11 R, 12 R)",
+          "pathIds": [],
+          "data": [
+            {
+              "id": "DataObject_0qyl3ha",
+              "name": "Thoracic_Part3.PNG"
+            }
+          ],
+          "eventIds": [
+            "Event_0s5prsh",
+            "Event_0n0nerf",
+            "Event_1vdb4sf"
+          ],
+          "children": [
+            {
+              "id": "Activity_1jdzu1h",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0s5prsh",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0n0nerf",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1vdb4sf",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1vdb4sf",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Middle mediastinal paraesophageal lymph nodes",
+          "pathIds": [
+            "Event_1vdb4sf"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_0n0nerf",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of injuring the aorta,the azygos vein",
+          "pathIds": [
+            "Event_0n0nerf"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_0s5prsh",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Lower mediastinal paraesohageal lymph nodes",
+          "pathIds": [
+            "Event_0s5prsh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_1jdzu1h",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Ligation of thoracic duct at the level of the hiatus right to the aorta",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0nfxtb9",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0nfxtb9",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Incision of pleura ventrally starting at the transhiatal dissection point with lymphadenectomy along pericardium, left atrium and lung to right main bronchus and carina",
+          "textAnnotation": "Resection of lower and middle mediastinal paraesophageal and subcarinal lymph nodes (lymph node stations 12 L, 11 L, 9)",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_0g1x791",
+            "Event_1u7d7sz",
+            "Event_1rl680i",
+            "Event_0rqnpkp"
+          ],
+          "children": [
+            {
+              "id": "Activity_1q7x7y8",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0g1x791",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1u7d7sz",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1rl680i",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0rqnpkp",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0rqnpkp",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Subcarinal lymph nodes",
+          "pathIds": [
+            "Event_0rqnpkp"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_1rl680i",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of injuring the pericardium, the aorta",
+          "pathIds": [
+            "Event_1rl680i"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_1u7d7sz",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Middle mediastinal paraesophageal lymph nodes",
+          "pathIds": [
+            "Event_1u7d7sz"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_0g1x791",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Lower mediastinal paraesohageal lymph nodes",
+          "pathIds": [
+            "Event_0g1x791"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_1q7x7y8",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Completion of lymphadenectomy along left main bronchus and around esophagus",
+          "textAnnotation": "Resection of aortopulmonary window, upper mediastinal paraesophageal, lower and upper paratracheal lymph nodes (lymph node stations 8, 10 R&L, 7 R&L, 6 R&L)",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_08xwld5",
+            "Event_03avxzz",
+            "Event_0553yqu",
+            "Event_1ad5e5r"
+          ],
+          "children": [
+            {
+              "id": "Activity_025rnut",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_08xwld5",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_03avxzz",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0553yqu",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1ad5e5r",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1ad5e5r",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Lower paratracheal lymph nodes",
+          "pathIds": [
+            "Event_1ad5e5r"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_0553yqu",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of Upper paratracheal lymph nodes",
+          "pathIds": [
+            "Event_0553yqu"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_03avxzz",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of Aortopulmonary window lymph nodes",
+          "pathIds": [
+            "Event_03avxzz"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_08xwld5",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Resection of  Upper mediastinal paratracheal lymph nodes",
+          "pathIds": [
+            "Event_08xwld5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_025rnut",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Completely mobilization of esophagus",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_0xccaiz"
+          ],
+          "children": [
+            {
+              "id": "Activity_1uljwqn",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0xccaiz",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0xccaiz",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hemostasis because of bleeding",
+          "pathIds": [
+            "Event_0xccaiz"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_1uljwqn",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Transection of esophagus",
+          "textAnnotation": "At the height of the ligated azygos vein arcus",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0fvtcwv",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0fvtcwv",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Resection of the oral staple line with opening of the esophagus for frozen section",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_0o1aqba"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0psypxj",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0o1aqba",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0o1aqba",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Section is not cancer free",
+          "pathIds": [
+            "Event_0o1aqba"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0ennkoi",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0ennkoi",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "More oral transection of esophagus",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_0o1aqba"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0psypxj",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0psypxj",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1elg9b8",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1elg9b8",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Construction of four holding sutures and a purse-string suture",
+          "textAnnotation": "Four holding sutures at 12, 3, 6 and 9 o`clock with fixation of the esophageal mucosa to the muscular wall. Purse-string suture for fixation of the anvil.",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1rn73sb",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1rn73sb",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "heading: Stomach Pull-up and Insertion of Anvil",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0hd30t0",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0hd30t0",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Da Vinci undocking",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1gg08bc",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1gg08bc",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Mini-thoracotomy and insertion of an alexis wound retractor",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_053qqo9",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_053qqo9",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Insertion of circular stapler anvil and securing it with purse-string suture",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_0ljiyx5",
+            "Event_0pa3kqr"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0wx0wq6",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0ljiyx5",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0pa3kqr",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0pa3kqr",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Circular stapler anvil does not fit into the esophageal stump",
+          "pathIds": [
+            "Event_0pa3kqr"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1owrblp",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1owrblp",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "New try OR other anvil",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_0pa3kqr"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0wx0wq6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0ljiyx5",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Threads of the sutures break",
+          "pathIds": [
+            "Event_0ljiyx5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0slmpy9",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0slmpy9",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "New suture",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_0ljiyx5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0wx0wq6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0wx0wq6",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_05c60zu",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_05c60zu",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Stomach pull-up under visual control",
+          "textAnnotation": "Pull-up until the gastric tube is located in the right thoracic cavity",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_0wppo2c"
+          ],
+          "children": [
+            {
+              "id": "Activity_0ppuj7r",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0wppo2c",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0wppo2c",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "False estimation of the tractive force necessary for stomach pull-up --> damaging the gastric conduit",
+          "pathIds": [
+            "Event_0wppo2c"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_0ppuj7r",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "heading: Circular Stapled Anastomosis",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_01ts80s",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_01ts80s",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Extraction of specimen and incision in minor curvature",
+          "textAnnotation": "Out of the thorax through the mini-thoracotomy",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_10s7v3x",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_10s7v3x",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Insertion of circular stapler handle",
+          "textAnnotation": "28mm tri-stapler into the stomach conduit bringing it back to the thorax",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1uk0vnb",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1uk0vnb",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Connecting circular stapler with anvil",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0gq8cjd",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0gq8cjd",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Stapling the gastric conduit to the esophageal stump",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_14qatcl",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_14qatcl",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Inspection of stapled mucosal ring",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0h5yy8p",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0h5yy8p",
+          "type": "PARALLEL",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_16d8j3y",
+              "pathDescription": ""
+            },
+            {
+              "id": "Activity_0i1nlpo",
+              "pathDescription": ""
+            },
+            {
+              "id": "Activity_1rzb3nd",
+              "pathDescription": ""
+            },
+            {
+              "id": "Activity_01r1g15",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_01r1g15",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Checking the perfusion of the gastric conduit with ICG",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_01r1g15"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_0hhp4r3"
+          ],
+          "children": [
+            {
+              "id": "Gateway_15op61e",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0hhp4r3",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0hhp4r3",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Anastomosis insufficiency (visible with ICG)",
+          "pathIds": [
+            "Activity_01r1g15",
+            "Event_0hhp4r3"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_00pkkha",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_00pkkha",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Oversewing and checking again with ICG",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_01r1g15",
+            "Event_0hhp4r3"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_15op61e",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_15op61e",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_01r1g15"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1vih1cq",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1rzb3nd",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Da Vinci re-docking and targeting the esophago-gastrostomy",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1rzb3nd"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1vih1cq",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0i1nlpo",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Removal of specimen through the mini thoracotomy",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0i1nlpo"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1vih1cq",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_16d8j3y",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Transection of gastric conduit left to the esophago-gastrostomy using a linear stapler",
+          "textAnnotation": "Separate dissection of the greater omentum and gastroepiploic vessels.",
+          "pathIds": [
+            "Activity_16d8j3y"
+          ],
+          "data": [],
+          "eventIds": [
+            "Event_0jdyhfp",
+            "Event_1vcvbm3"
+          ],
+          "children": [
+            {
+              "id": "Gateway_1vih1cq",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0jdyhfp",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1vcvbm3",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1vcvbm3",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "D2 -Lymphadenectomy",
+          "pathIds": [
+            "Activity_16d8j3y",
+            "Event_1vcvbm3"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Event_0jdyhfp",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "D3 -Lymphadenectomy",
+          "pathIds": [
+            "Activity_16d8j3y",
+            "Event_0jdyhfp"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Gateway_1vih1cq",
+          "type": "PARALLEL",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1a1uqtj",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1a1uqtj",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Da Vinci undocking",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_02g3fct",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_02g3fct",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "heading: Completion of Thoracic Part",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_03nn96j",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_03nn96j",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Insertion of a gastric tube under visual control",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_19srox6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_19srox6",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Insertion of two chest tubes",
+          "textAnnotation": "One along the esophago-gastrostomy, one ventrally on the diaphragmatic dome for air",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0xwkoik",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0xwkoik",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Re-ventilation of the right lung under visual control",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0l9fwq5",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0l9fwq5",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Port-removal",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1u1gntr",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1u1gntr",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Closure of thorax, fascia and skin",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0p8rywq",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0p8rywq",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Sterile bandage",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Event_16wrb67",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_16wrb67",
+          "type": "END_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

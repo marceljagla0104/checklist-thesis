@@ -1,0 +1,36 @@
+version: '3'
+services:
+  db:
+    image: mongo:latest
+    container_name: "db"
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb-data:/data/db
+  backend:
+    container_name: "backend"
+    build: ./Backend/checklist/boundary
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
+    environment:
+      SPRING_DATA_MONGODB_URI: mongodb://db:27017/checklist_db
+      SPRING_DATA_MONGODB_HOST: db
+      SPRING_PROFILES_ACTIVE: "docker"
+    volumes:
+      - checklist-data:/data
+
+  frontend:
+    container_name: "frontend"
+    build:
+      context: ../../Frontend/checklist
+      dockerfile: ../../Frontend/checklist/Dockerfile
+    ports:
+      - '80:80'
+    depends_on:
+      - backend
+
+volumes:
+  mongodb-data:
+  checklist-data:

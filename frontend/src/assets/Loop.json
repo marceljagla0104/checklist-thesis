@@ -1,0 +1,95 @@
+{
+  "id": "Process_110u6z1",
+  "heading": "Portimplantation",
+  "subprocesses": [
+    {
+      "order": 1,
+      "name": "Vorbereitung",
+      "elements": [
+        {
+          "id": "Event_0eqda1q",
+          "type": "START_EVENT",
+          "inputType": "NONE",
+          "name": "Vorbereitung",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_09ktdgu",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_09ktdgu",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Manuelle Eingabe der Stammdaten oder Entnahme aus KIS?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0da1ssv",
+              "pathDescription": "Entnahme aus KIS"
+            },
+            {
+              "id": "Activity_0conz0y",
+              "pathDescription": "manuelle Eingabe"
+            }
+          ]
+        },
+        {
+          "id": "Activity_0conz0y",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Datum eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Event_1x98jzl",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1x98jzl",
+          "type": "END_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        },
+        {
+          "id": "Activity_0da1ssv",
+          "type": "TASK",
+          "inputType": "UPLOAD",
+          "name": "Datei hochladen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0da1ssv"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_09ktdgu",
+              "pathDescription": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

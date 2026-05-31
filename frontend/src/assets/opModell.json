@@ -1,0 +1,2879 @@
+{
+  "id": "Process_110u6z1",
+  "heading": "Cochlear-Operation",
+  "subprocesses": [
+    {
+      "order": 1,
+      "name": "Vorbereitung",
+      "elements": [
+        {
+          "id": "Event_0eqda1q",
+          "type": "START_EVENT",
+          "inputType": "CHECKBOX",
+          "name": "Vorbereitung",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [
+            {
+              "id": "data1",
+              "url": "https://www.reutlingen-university.de/typo3conf/ext/rt_content/Resources/Public/Icons/logo-main.svg"
+            }
+          ],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "TESTHEADING",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "TESTHEADING",
+          "type": "TASK",
+          "inputType": "HEADING",
+          "name": "Das hier ist eine Überschrift",
+          "textAnnotation": "Manuelle Eingabe der Stammdaten oder Entnahme aus KIS?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_09ktdgu",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_09ktdgu",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Manuelle Eingabe der Stammdaten oder Entnahme aus KIS?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0da1ssv",
+              "pathDescription": "Entnahme aus KIS"
+            },
+            {
+              "id": "Activity_0conz0y",
+              "pathDescription": "manuelle Eingabe"
+            }
+          ]
+        },
+        {
+          "id": "Activity_0conz0y",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Datum eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0tmb4x6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0tmb4x6",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Patientenname  eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_03x3dm0",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_03x3dm0",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Patientenvorname eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0y24e9o",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0y24e9o",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Station  eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1xesyam",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1xesyam",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Diagnose  eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0seqhac",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0seqhac",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Operation  eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_10wclzw",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_10wclzw",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Operateure  eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0rcap1a",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0rcap1a",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "OP-Pflege  eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0non8u6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0non8u6",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Implantat Firma  eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_06jmy0z",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_06jmy0z",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Gewählte Elektrode  eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0conz0y"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1oukusb",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0da1ssv",
+          "type": "TASK",
+          "inputType": "UPLOAD",
+          "name": "Datei hochladen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0da1ssv"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1oukusb",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1oukusb",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1vb5rmi",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1vb5rmi",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Anästhesieprotokoll erfassen",
+          "textAnnotation": "s. Anästhesieprotokoll",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1t7uixs",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1t7uixs",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Präoperativen Check durchführen",
+          "textAnnotation": "zur Erinnerung",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1dsr1np",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1dsr1np",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Surgical Team Time Out durchführen",
+          "textAnnotation": "s. MEDICO",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1rrq9rz",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1rrq9rz",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Welche Seite wird operiert?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_12prpnu",
+              "pathDescription": "links"
+            },
+            {
+              "id": "Activity_0u6tkzl",
+              "pathDescription": "rechts"
+            }
+          ]
+        },
+        {
+          "id": "Activity_0u6tkzl",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Patient auf linker Seite lagern",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0u6tkzl"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1euesm4",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1euesm4",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Retroauriculäre Rasur rechts durchführen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0u6tkzl"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1eddb3n",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1eddb3n",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Infiltration mit Lokalanästhetikum rechts durchführen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0u6tkzl"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_04ee1ue",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_04ee1ue",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Facialmonitoring auf rechter Seite anlegen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0u6tkzl"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1o4emm2",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1o4emm2",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Rechtes Ohr steril abdecken",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0u6tkzl"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_022p9mp",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_12prpnu",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Patient auf rechter Seite lagern",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_12prpnu"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1qnqluf",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1qnqluf",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Retroauriculäre Rasur links durchführen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_12prpnu"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1ohcfqm",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1ohcfqm",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Infiltration mit Lokalanästhetikum links durchführen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_12prpnu"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_088faxh",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_088faxh",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Facialmonitoring auf linker Seite anlegen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_12prpnu"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_19h48cq",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_19h48cq",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Linkes Ohr steril abdecken",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_12prpnu"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_022p9mp",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_022p9mp",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Event_1x98jzl",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1x98jzl",
+          "type": "END_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "order": 2,
+      "name": "Zugang",
+      "elements": [
+        {
+          "id": "Event_09hs4c5",
+          "type": "START_EVENT",
+          "inputType": "CHECKBOX",
+          "name": "Zugang",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0gpse79",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0gpse79",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Schnittführung einzeichnen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_08eh7sn",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_08eh7sn",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Haut scharf durchtrennen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_0ujzxzh"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0ijedsz",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0ujzxzh",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0ujzxzh",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Auftritt kleiner Mikroblutungen",
+          "pathIds": [
+            "Event_0ujzxzh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1yl4dg0",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1yl4dg0",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Mikroblutungen stillen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_0ujzxzh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0ijedsz",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0ijedsz",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0fifu74",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0fifu74",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "subkutane Mobilisation durchführen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_07pd1cf"
+          ],
+          "children": [
+            {
+              "id": "Gateway_0b4qqk3",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_07pd1cf",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_07pd1cf",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Auftritt kleiner Mikroblutungen",
+          "pathIds": [
+            "Event_07pd1cf"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0jwqdby",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0jwqdby",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Mikroblutungen stillen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_07pd1cf"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0b4qqk3",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0b4qqk3",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_08awt3v",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_08awt3v",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Inzision des Periosts durchführen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_0ww0pqv"
+          ],
+          "children": [
+            {
+              "id": "Gateway_1ngswh7",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0ww0pqv",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0ww0pqv",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Auftritt kleiner Mikroblutungen",
+          "pathIds": [
+            "Event_0ww0pqv"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0nm2za4",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0nm2za4",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Mikroblutungen stillen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_0ww0pqv"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1ngswh7",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1ngswh7",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_16pwqy0",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_16pwqy0",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Periost abheben",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_0r668yh",
+            "Event_03e8ayi"
+          ],
+          "children": [
+            {
+              "id": "Gateway_1m8ocq4",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0r668yh",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_03e8ayi",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_03e8ayi",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Periost stark der Kalotte anheftend",
+          "pathIds": [
+            "Event_03e8ayi"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1k101dp",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1k101dp",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Periost präparieren",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_03e8ayi"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1m8ocq4",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0r668yh",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Auftritt kleiner Mikroblutungen",
+          "pathIds": [
+            "Event_0r668yh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_15ydjda",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_15ydjda",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Mikroblutungen sitllen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_0r668yh"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1m8ocq4",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1m8ocq4",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_17w5e7k",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_17w5e7k",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Subperiostae Tasche bilden",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0pm5s8b",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0pm5s8b",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Gehörgang bis zur Spina suprameatum auslösen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1aego2s",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1aego2s",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Gewebe von M. Temporalis entnehmen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_05u1rnb",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_05u1rnb",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "OP-Gebiet aufspannen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_15u11fr",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_15u11fr",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Corticalis auffräsen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_02jj4u8",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_02jj4u8",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Zellen der Mastoidhöhle freilegen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0aksobv",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0aksobv",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Sinus-Dura-Winkel modellieren",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_19lxncl",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_19lxncl",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Zellen in Richtung Antrum verfolgen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0l4fb7k",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0l4fb7k",
+          "type": "PARALLEL",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1bho48m",
+              "pathDescription": ""
+            },
+            {
+              "id": "Activity_0mg8abl",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0mg8abl",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Implantatbett anlegen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0mg8abl"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_10uk9ox",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1bho48m",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Graben für Elektroden-träger anlegen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1bho48m"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_10uk9ox",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_10uk9ox",
+          "type": "PARALLEL",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_16gt16u",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_16gt16u",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Implantatbetttiefe eingeben",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0s37yau",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0s37yau",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Bohrloch an Implantatrand anlegen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0ruslbh",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0ruslbh",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Caprolonfaden fixieren",
+          "textAnnotation": "zur späteren Fixierung des Implantats",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Event_17dkyfk",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_17dkyfk",
+          "type": "END_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "order": 3,
+      "name": "Operation unter Mikroskop",
+      "elements": [
+        {
+          "id": "Event_16fbm1p",
+          "type": "START_EVENT",
+          "inputType": "CHECKBOX",
+          "name": "Operation unter Mikroskop",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_09cegbq",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_09cegbq",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Hintere Gehörwand ausdünnen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1wtfr2n",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1wtfr2n",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Ins Mittelohr eingehen",
+          "textAnnotation": "über posteriore Tympanotomie",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_03hhr6i",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_03hhr6i",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Knochen bis Fazialis runternehmen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_1ck9j5v",
+            "Event_0uvtv8z"
+          ],
+          "children": [
+            {
+              "id": "Gateway_19oh818",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1ck9j5v",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_0uvtv8z",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_0uvtv8z",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "starke Ebonisierung",
+          "pathIds": [
+            "Event_0uvtv8z"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_11v34il",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_11v34il",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Ebonisierung dokumentieren",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_0uvtv8z"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_19oh818",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1ck9j5v",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "starke Pneumanisation",
+          "pathIds": [
+            "Event_1ck9j5v"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1x0a4bj",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1x0a4bj",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Pneumanisation dokumentieren",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_1ck9j5v"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_19oh818",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_19oh818",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1dkcyh5",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1dkcyh5",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Foto machen?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1jfvrk5",
+              "pathDescription": "ja"
+            },
+            {
+              "id": "Gateway_04mikvq",
+              "pathDescription": "nein"
+            }
+          ]
+        },
+        {
+          "id": "Activity_1jfvrk5",
+          "type": "TASK",
+          "inputType": "PICTURE",
+          "name": "Foto aufnehmen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1jfvrk5"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_04mikvq",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_04mikvq",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_06672gi",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_06672gi",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Auslass der Chorda identifizieren",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [
+            "Event_1ehdh8z",
+            "Event_1uu9hj0"
+          ],
+          "children": [
+            {
+              "id": "Gateway_13wv3fr",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1ehdh8z",
+              "pathDescription": ""
+            },
+            {
+              "id": "Event_1uu9hj0",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1uu9hj0",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "starke Pneumanisation",
+          "pathIds": [
+            "Event_1uu9hj0"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0kc0pvq",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0kc0pvq",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Pneumanisation beheben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_1uu9hj0"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_13wv3fr",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1ehdh8z",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "starke Ebonisierung",
+          "pathIds": [
+            "Event_1ehdh8z"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_14enj52",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_14enj52",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Ebonisierung beheben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Event_1ehdh8z"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_13wv3fr",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_13wv3fr",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0io7762",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0io7762",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Bleibt der N. VII knöchern bedeckt oder wird er teilweise freigelegt?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1vrnscf",
+              "pathDescription": "teilweise freigelegt"
+            },
+            {
+              "id": "Gateway_0udrnsg",
+              "pathDescription": "bleibt knöchern bedeckt"
+            }
+          ]
+        },
+        {
+          "id": "Activity_1vrnscf",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "N.VII freilegen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1vrnscf"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0udrnsg",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0udrnsg",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_01jepge",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_01jepge",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Wie wird mit der Chorda verfahren?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_13iimzc",
+              "pathDescription": "wird freigelegt"
+            },
+            {
+              "id": "Activity_1worr7j",
+              "pathDescription": "wird geopfert"
+            },
+            {
+              "id": "Gateway_18ludq8",
+              "pathDescription": "wird geschont"
+            }
+          ]
+        },
+        {
+          "id": "Activity_1worr7j",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Chorda entfernen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1worr7j"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_18ludq8",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_13iimzc",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Chorda freilegen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_13iimzc"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_18ludq8",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_18ludq8",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1n99hay",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1n99hay",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Amboss-Steigbügel-Gelenk mit Stapediussehne darstellen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0lf1hly",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0lf1hly",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Rundfensternische verdeckt?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0t8u1c6",
+              "pathDescription": "verdeckt durch Knöchernen Vorhang"
+            },
+            {
+              "id": "Gateway_0gb7nzy",
+              "pathDescription": "gut einsehbar"
+            }
+          ]
+        },
+        {
+          "id": "Activity_0t8u1c6",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Knochen am runden Fenster zurück nehmen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0t8u1c6"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0gb7nzy",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0gb7nzy",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1rsrd2x",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1rsrd2x",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Rundfensternische identifizieren",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0zokcnv",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0zokcnv",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Anteriore Zugang zum Promotorium mögich?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1i3xgkj",
+              "pathDescription": "durch Chorda-Fazialis erschwert"
+            },
+            {
+              "id": "Gateway_1va70yv",
+              "pathDescription": "ja"
+            }
+          ]
+        },
+        {
+          "id": "Activity_1i3xgkj",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Scala tympani über erweiterten Rundfensterzugang eröffnen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1i3xgkj"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_01gjz2j",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_01gjz2j",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Knochen abtragen",
+          "textAnnotation": "Mit 1,0 Diamantbohrer in niedriger Umdrehung",
+          "pathIds": [
+            "Activity_1i3xgkj"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1mb0afg",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1mb0afg",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Membran der Rundfensternische befreien",
+          "textAnnotation": "Mit der Nadel",
+          "pathIds": [
+            "Activity_1i3xgkj"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_1va70yv",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_1va70yv",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0fk5wbe",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0fk5wbe",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Implantat in Bett ablegen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0yxv6fm",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0yxv6fm",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Implantat fixieren",
+          "textAnnotation": "Mit zuvor vorgelegtem Fixierungsfaden",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0oq8s4b",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0oq8s4b",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Welcher Elektrodentyp wird verwendet?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0iz6qnw",
+              "pathDescription": "Cochlear CI 622"
+            },
+            {
+              "id": "Activity_0pjq8h2",
+              "pathDescription": "Cochlear CI 632"
+            },
+            {
+              "id": "Activity_0cmub7x",
+              "pathDescription": "Med El Flex 26/28"
+            },
+            {
+              "id": "Activity_00r3w0t",
+              "pathDescription": "Ab, Slim J"
+            },
+            {
+              "id": "Activity_1uz1i49",
+              "pathDescription": "Cochlear CI 612"
+            }
+          ]
+        },
+        {
+          "id": "Activity_1uz1i49",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Insertion mit langsamem Vorschieben des Elektrodenträgers",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1uz1i49"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_03ngokb",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_03ngokb",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Stillet zurückziehen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1uz1i49"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_108n2nl",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_108n2nl",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Cochlestomie mit Bindegewebe versiegeln",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1uz1i49"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1vibghb",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1vibghb",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Stiftelektrode cranial unter M. temporalis platzieren",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1uz1i49"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_084nnug",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_00r3w0t",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Elektrodenträger bis zur blauen Markierung einführen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_00r3w0t"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0ukv0z6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0ukv0z6",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Elektrode mit Winglett in porsteriorer Tympanotomie stabilisieren",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_00r3w0t"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1cw7u8k",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1cw7u8k",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Rundes Fenster mit Bindegewebe versiegeln",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_00r3w0t"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_084nnug",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0cmub7x",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Elektrodenträger bis zur blauen Markierung einführen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0cmub7x"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_15qfnqn",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_15qfnqn",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Rundes Fenster mit Bindegewebe versiegeln",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0cmub7x"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_084nnug",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0pjq8h2",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Insertionssheath bis zur Stoppmarkierung einführen",
+          "textAnnotation": "Nachdem die Elektrode geladen wurde",
+          "pathIds": [
+            "Activity_0pjq8h2"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0uz6hho",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0uz6hho",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Elektrode bis zur weißen Markierung vorschieben",
+          "textAnnotation": "Bis deckungsgleich mit Markierungen",
+          "pathIds": [
+            "Activity_0pjq8h2"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1xeey7g",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1xeey7g",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Elektrode fixieren",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0pjq8h2"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0ck1r3l",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0ck1r3l",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Insertionsheath zurückziehen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0pjq8h2"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0s9gyvi",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0s9gyvi",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Stiftelektrode cranial unter M. temporalis platzieren",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0pjq8h2"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_084nnug",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0iz6qnw",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Elektrode bis zum zweiten Markerring einführen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0iz6qnw"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0hu8bx7",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0hu8bx7",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Rundfensternische versiegeln",
+          "textAnnotation": "Bei kompletter Insertion",
+          "pathIds": [
+            "Activity_0iz6qnw"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_113j210",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_113j210",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Stiftelektrode cranial unter M. temporalis platzieren",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0iz6qnw"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_084nnug",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_084nnug",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_06ht3jn",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_06ht3jn",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Foto machen?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0lsdc2v",
+              "pathDescription": "nein"
+            },
+            {
+              "id": "Activity_0mh25nw",
+              "pathDescription": "ja"
+            }
+          ]
+        },
+        {
+          "id": "Activity_0mh25nw",
+          "type": "TASK",
+          "inputType": "PICTURE",
+          "name": "Foto aufnehmen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0mh25nw"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0lsdc2v",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0lsdc2v",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [
+            "Gateway_0lsdc2v"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Event_09awbyi",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_09awbyi",
+          "type": "END_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "order": 4,
+      "name": "Operation nach Mikroskop",
+      "elements": [
+        {
+          "id": "Event_0rbt8xp",
+          "type": "START_EVENT",
+          "inputType": "CHECKBOX",
+          "name": "Operation nach Mikroskop",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0jzo0lt",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0jzo0lt",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Welches Implantat wird genutzt?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0nhm95k",
+              "pathDescription": "MED El"
+            },
+            {
+              "id": "Activity_1gtofgl",
+              "pathDescription": "Cochlear 622/612"
+            },
+            {
+              "id": "Activity_067rlqq",
+              "pathDescription": "AB"
+            },
+            {
+              "id": "Activity_0yfo68z",
+              "pathDescription": "Cochlear 632"
+            }
+          ]
+        },
+        {
+          "id": "Activity_0yfo68z",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Impedanzwerte eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0yfo68z"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_084h282",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_084h282",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Stadiusreflexe eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0yfo68z"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0ccd4z6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0ccd4z6",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "NRT-Schwellenwerte eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0yfo68z"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1elxpfq",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1elxpfq",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "SOE Werte eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0yfo68z"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0r07ezt",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_067rlqq",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Impedanzwerte eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_067rlqq"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0vsgtsh",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0vsgtsh",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Stadiusreflexe eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_067rlqq"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1enb9em",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1enb9em",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "NRI-Schwellenwerte eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_067rlqq"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0r07ezt",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1gtofgl",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Impedanzwerte eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1gtofgl"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1xl3pv6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1xl3pv6",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Stadiusreflexe eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1gtofgl"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0qgwgad",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0qgwgad",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "NRT-Schwellenwerte eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1gtofgl"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0r07ezt",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0nhm95k",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Impedanzwerte eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0nhm95k"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0eqm3ij",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0eqm3ij",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Stadiusreflexe eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0nhm95k"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_10zkpy1",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_10zkpy1",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "ART-Schwellenwerte eingeben",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_0nhm95k"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0r07ezt",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0r07ezt",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_18p2sm3",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_18p2sm3",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Elektrodenkabel mit Tachosilpatches fixieren",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_0xcobyy",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_0xcobyy",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Foto machen?",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1ugrav0",
+              "pathDescription": "ja"
+            },
+            {
+              "id": "Gateway_08e14yw",
+              "pathDescription": "nein"
+            }
+          ]
+        },
+        {
+          "id": "Activity_1ugrav0",
+          "type": "TASK",
+          "inputType": "PICTURE",
+          "name": "Foto aufnehmen",
+          "textAnnotation": "",
+          "pathIds": [
+            "Activity_1ugrav0"
+          ],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Gateway_08e14yw",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway_08e14yw",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0f3spqw",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0f3spqw",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Muskelperiost-lappen re-adaptieren",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_04f1moj",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_04f1moj",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Subkutannaht durchführen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_1clzmrn",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_1clzmrn",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Hautnaht durchführen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0k8dbv5",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0k8dbv5",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Gehörgangstamponade durchführen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0jh5zeo",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0jh5zeo",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Kopfverband anlegen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0cccevx",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0cccevx",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Intraoperatives DVT durchführen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_09f9fyv",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_09f9fyv",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Finalen Check durchführen",
+          "textAnnotation": "zur Erinnerung",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Event_1pb7ezi",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_1pb7ezi",
+          "type": "END_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        }
+      ]
+    },
+    {
+      "order": 5,
+      "name": "Nachbereitung",
+      "elements": [
+        {
+          "id": "Event_1tzxvpx",
+          "type": "START_EVENT",
+          "inputType": "CHECKBOX",
+          "name": "Nachbereitung",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0qypxwc",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0qypxwc",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Anzahl der Tage zum Tragen des Druckverbandes eingeben",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_14oqru8",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_14oqru8",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Anzahl der Tafen zur Fadenentfernung eingeben",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_0fw4wnx",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_0fw4wnx",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Terminliche Anbindung an Hörzentrum durchführen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Activity_07uetcg",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Activity_07uetcg",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Implantatausweis aushändigen",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": [
+            {
+              "id": "Event_03b89fy",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event_03b89fy",
+          "type": "END_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "pathIds": [],
+          "data": [],
+          "eventIds": [],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

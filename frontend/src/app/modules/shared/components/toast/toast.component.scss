@@ -1,0 +1,18 @@
+.container {
+  padding: 10px;
+  background-color: #12a63e;
+  color: white;
+
+  min-width: 150px;
+
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.4);
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 5px;
+
+}
+
+.warn {
+  background-color: red;
+  color: white;
+}

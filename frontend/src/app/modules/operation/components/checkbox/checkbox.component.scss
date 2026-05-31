@@ -1,0 +1,125 @@
+:host {
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 10px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+
+.note-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+
+  mat-icon:hover {
+    cursor: pointer;
+  }
+}
+
+.event-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.events {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+  width: 50%;
+}
+
+.input-checkbox {
+  width: 30px !important;
+  height: 30px !important;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  gap: 10px;
+  background-color: #d2eaf4;
+  border: 1px solid #84C4E0;
+  padding: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  max-width: 400px;
+
+  div {
+    max-width: 365px;
+  }
+
+  mat-icon {
+    color: #84C4E0;
+  }
+}
+
+.isChecked {
+  color: green;
+}
+
+.isSkipped {
+  color: orange;
+}
+
+.checkbox-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 5px;
+  width: 50%;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+
+.display-none {
+  visibility: hidden;
+}
+
+.display-block {
+  visibility: visible;
+}
+
+.isDisabled {
+  color: grey;
+}
+
+.timestamp {
+  color: grey;
+  font-size: 14px;
+
+}
+
+.instruments {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  color: #7c81b6;
+  padding-left: 45px;
+
+  mat-icon {
+    color: blue;
+  }
+}

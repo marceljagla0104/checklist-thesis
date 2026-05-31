@@ -1,0 +1,15 @@
+<div *ngIf="entries$ | async as entries" class="content">
+  <h2>{{ "documentation" | translate }}</h2>
+
+  <app-chronological-editor
+    [entries]="entries"
+    [title]="title"
+    [disabled]="notSurgeon()"
+  ></app-chronological-editor>
+
+  <app-duration-editor
+    [entries]="entries"
+    [title]="title"
+    [disabled]="notSurgeon()"
+  ></app-duration-editor>
+</div>

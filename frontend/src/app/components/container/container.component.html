@@ -1,0 +1,16 @@
+<div class="container">
+  <button mat-button class="start-button" value="logout" routerLink="/">
+    <mat-icon>exit_to_app</mat-icon>
+  </button>
+  <button
+    mat-button
+    class="settings-button"
+    value="settings"
+    (click)="openSettings()"
+  >
+    <mat-icon>settings</mat-icon>
+  </button>
+  <app-toast></app-toast>
+
+  <router-outlet></router-outlet>
+</div>

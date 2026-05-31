@@ -1,0 +1,48 @@
+<table
+  *ngIf="docus && docus.length > 0; else info"
+  mat-table
+  [dataSource]="docus"
+>
+  <!-- Room Column -->
+  <ng-container matColumnDef="room">
+    <th mat-header-cell *matHeaderCellDef>{{ "ROOM" | translate }}</th>
+    <td mat-cell *matCellDef="let docu">{{ docu.roomId }}</td>
+  </ng-container>
+
+  <!-- Name Column -->
+  <ng-container matColumnDef="name">
+    <th mat-header-cell *matHeaderCellDef>Name</th>
+    <td mat-cell *matCellDef="let docu">{{ docu.operationName }}</td>
+  </ng-container>
+
+  <!-- StartedAt Column -->
+  <ng-container matColumnDef="createdAt">
+    <th mat-header-cell *matHeaderCellDef>{{ "STARTED_AT" | translate }}</th>
+    <td mat-cell *matCellDef="let docu">
+      {{ docu.createdAt | date: "dd.MM.YYYY, HH:MM" }}
+    </td>
+  </ng-container>
+
+  <!-- SavedAt Column -->
+  <ng-container *ngIf="finished" matColumnDef="savedAt">
+    <th mat-header-cell *matHeaderCellDef>{{ "SAVED_AT" | translate }}</th>
+    <td mat-cell *matCellDef="let docu">
+      {{ docu.savedAt | date: "dd.MM.YYYY, HH:MM" }}
+    </td>
+  </ng-container>
+
+  <tr
+    class="mat-header-row"
+    mat-header-row
+    *matHeaderRowDef="displayedColumns"
+  ></tr>
+  <tr
+    mat-row
+    *matRowDef="let row; columns: displayedColumns"
+    (click)="openDocu(row.id, row.operationId)"
+  ></tr>
+</table>
+
+<ng-template #info>
+  <div class="info">{{ "NO_OPERATIONS" | translate }}</div>
+</ng-template>

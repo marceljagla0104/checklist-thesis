@@ -1,0 +1,10 @@
+<div
+  class="editor"
+  [attr.contenteditable]="!disabled"
+  [class.disabled]="disabled"
+>
+  {{ text }}
+</div>
+<app-button *ngIf="!disabled" (clickCallback)="download()" [disabled]="disabled"
+  >Download .docx
+</app-button>

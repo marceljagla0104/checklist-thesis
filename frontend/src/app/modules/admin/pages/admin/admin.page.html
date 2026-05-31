@@ -1,0 +1,47 @@
+<app-page>
+  <div class="content">
+    <h1>Admin</h1>
+
+    <h2>{{"TEMPLATES" | translate}}</h2>
+
+    <span class="description">
+      Operationsvorlagen sind eine .zip bestehend aus einem OpModell.bpmn einer
+      ALT.yaml für Alternativbeschreibungen, einer META.yaml für Meta-Daten und
+      Bildern im .png-Format, welche in der META.yaml referenziert werden.
+    </span>
+    <div class="section">
+      <span class="heading">{{ "UPLOAD_OPERATION" | translate}}</span>
+      <form (submit)="onSubmit()">
+        <input type="file" accept=".zip" (change)="onFileSelected($event)" />
+        <button type="submit">Upload</button>
+      </form>
+    </div>
+
+    <div class="section">
+      <span class="heading">{{ "EXISTING_OPERATIONS" | translate}}</span>
+      <div *ngFor="let operation of operations$ | async">
+        {{operation.name}} {{operation.createdAt | date: 'dd.MM.yyyy, HH:mm'}}
+        <button (click)="deleteOperation(operation.id)">Löschen</button>
+      </div>
+    </div>
+
+    <h2>{{"OPERATIONS" | translate}}</h2>
+
+    <div class="section operations">
+      <div class="operation">
+        Abgeschlossen
+        <app-documentation-table
+          [docus]="finished$| async"
+          [finished]="true"
+        ></app-documentation-table>
+      </div>
+
+      <div class="operation">
+        Laufend
+        <app-documentation-table
+          [docus]="unfinished$| async"
+        ></app-documentation-table>
+      </div>
+    </div>
+  </div>
+</app-page>

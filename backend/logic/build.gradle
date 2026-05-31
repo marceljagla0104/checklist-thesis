@@ -1,0 +1,6 @@
+dependencies {
+    implementation 'org.springframework.data:spring-data-mongodb:3.2.12'
+    implementation 'io.projectreactor:reactor-core:3.5.8'
+    implementation 'org.yaml:snakeyaml:2.2'
+
+}

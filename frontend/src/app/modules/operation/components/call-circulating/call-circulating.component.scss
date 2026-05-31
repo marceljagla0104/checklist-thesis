@@ -1,0 +1,25 @@
+button {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  background-color: #7c81b6;
+  border: none;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+
+  mat-icon {
+    color: white;
+    width: 36px;
+    height: 36px;
+    font-size: 36px;
+  }
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+.started {
+  background-color: orange;
+}
+

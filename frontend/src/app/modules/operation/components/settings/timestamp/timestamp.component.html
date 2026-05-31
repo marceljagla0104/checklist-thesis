@@ -1,0 +1,6 @@
+<div class="timestamp-settings">
+  <h2>{{'TIMESTAMP' | translate}}</h2>
+  <select id="timestamp" [(ngModel)]="selectedTimestampSettings" (change)="changeTimestamp()">
+    <option *ngFor="let timestamp of timestamps" [value]="timestamp">{{timestamp | translate}}</option>
+  </select>
+</div>

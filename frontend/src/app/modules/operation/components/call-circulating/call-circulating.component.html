@@ -1,0 +1,6 @@
+<button
+  [class.started]="(started$ | async) && !(done$ | async)"
+  (click)="callCirculatingNurse()"
+>
+  <mat-icon>record_voice_over</mat-icon>
+</button>

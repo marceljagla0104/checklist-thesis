@@ -1,0 +1,8 @@
+<div
+  [@slideInOut]
+  *ngIf="toast$ | async as toast"
+  [class.warn]="toast.color === 'warn'"
+  class="container"
+>
+  {{ toast.text }}
+</div>

@@ -1,0 +1,27 @@
+input {
+  width: 30px;
+  height: 30px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid #84C4E0;
+  padding: 10px;
+  border-radius: 3px;
+  gap: 10px;
+
+  span {
+    font-style: italic;
+  }
+}
+
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.disabled {
+  color: grey;
+}

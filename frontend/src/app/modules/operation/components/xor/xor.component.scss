@@ -1,0 +1,23 @@
+:host {
+}
+
+.xor-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.successors {
+  margin: 10px;
+  font-style: italic;
+}
+
+input {
+  height: 30px;
+  width: 30px;
+}
+
+.isDisabled{
+  color: grey;
+  pointer-events: none;
+}

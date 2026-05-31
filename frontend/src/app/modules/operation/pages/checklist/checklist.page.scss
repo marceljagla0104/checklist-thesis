@@ -1,0 +1,55 @@
+app-call-circulating {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.tabs {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+
+  flex-wrap: wrap;
+}
+
+app-subprocess-tab {
+  min-width: 33.33%;
+  cursor: pointer;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.active {
+  background-color: #5acef6;
+}
+
+.inactive {
+  color: black;
+}
+
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+app-subprocess {
+  margin-bottom: 100px;
+}

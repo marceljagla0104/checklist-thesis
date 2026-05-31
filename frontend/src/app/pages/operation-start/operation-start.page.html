@@ -1,0 +1,42 @@
+<app-page>
+  <div class="container">
+    <div class="step" *ngIf="step === 1">
+      Bitte Operationsvorlage wählen
+      <app-button
+        *ngFor="let op of operations$ | async"
+        (click)="operation(op.id)"
+      >
+        {{op.name}}
+      </app-button>
+    </div>
+    <div class="step" *ngIf="step === 2">
+      Operation wählen
+      <div class="step" *ngIf="role === Role.SURGEON || role === Role.SCRUB">
+        oder neu starten
+        <app-button (click)="createDocumentation()">Neu starten</app-button>
+      </div>
+
+      <div *ngIf="documentations$ | async as documentations" class="step">
+        <span *ngIf="documentations.length > 0; else noDocumentations"
+          >Laufende Operationen:</span
+        >
+        <app-button
+          *ngFor="let docu of documentations"
+          (click)="existingDocumentation(docu.id)"
+        >
+          {{docu.operationName}} vom {{docu.createdAt | date: 'dd.MM.YYYY,
+          HH:mm'}} Uhr
+        </app-button>
+      </div>
+
+      <ng-template #noDocumentations>
+        <span *ngIf="role === Role.STUDENT" class="info"
+          >Keine laufenden Operationen vorhanden</span
+        >
+      </ng-template>
+    </div>
+    <app-button class="back" (click)="back()">Zurück</app-button>
+  </div>
+  <!--back to other start-->
+  <app-toast></app-toast>
+</app-page>

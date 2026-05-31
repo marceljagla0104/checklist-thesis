@@ -1,0 +1,27 @@
+<app-page>
+  <div class="container">
+    <div class="step" *ngIf="step === 1">
+      Bitte eine Rolle wählen
+      <app-button (click)="choseRole(Role.SURGEON)">
+        Operateur/Assistenz
+      </app-button>
+      <app-button (click)="choseRole(Role.SCRUB)"> Instrumentierer</app-button>
+      <app-button (click)="choseRole(Role.STUDENT)">Student</app-button>
+      <app-button (click)="choseRole(Role.CIRCULATING)">Springer</app-button>
+    </div>
+
+    <div class="step" *ngIf="step === 2">
+      Bitte OP-Saal wählen
+      <app-button *ngFor="let no of [1,2,3,4]" (click)="choseRoom(no)">
+        OP-Saal {{no}}
+      </app-button>
+    </div>
+    <app-button class="back" *ngIf="step != 1" (click)="back()"
+      >Zurück</app-button
+    >
+  </div>
+
+  <app-button class="admin-button" (click)="gotToAdmin()">
+    <mat-icon>verified_user</mat-icon>
+  </app-button>
+</app-page>

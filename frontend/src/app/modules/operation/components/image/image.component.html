@@ -1,0 +1,17 @@
+<div class="container" *ngFor="let img of images">
+  <app-button *ngIf="!active" (clickCallback)="active = true">
+    <mat-icon>image</mat-icon>
+  </app-button>
+  <app-button *ngIf="active" (clickCallback)="active = false">
+    <mat-icon>close</mat-icon>
+  </app-button>
+  <div *ngIf="active" class="image">
+    <img
+      [src]="buildURL(img.url)"
+      alt="Image"
+      #image
+      (load)="adjustContainerWidth(image, container)"
+    />
+    <div class="caption" #container>{{ img.caption }}</div>
+  </div>
+</div>

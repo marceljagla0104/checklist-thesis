@@ -1,0 +1,18 @@
+<mat-icon *ngIf="!disabled" (click)="toggleDescription = !toggleDescription"
+  >edit
+</mat-icon>
+
+<div *ngIf="toggleDescription || (text$ | async)" class="description-container">
+  {{ "UNFORESEEN_EVENT" | translate }}
+  <label>{{ "DESCRIPTION" | translate }} </label>
+  <div class="input-field">
+    <input
+      type="text"
+      [value]="text$ | async"
+      (keyup.enter)="onEnterKeyPress($event)"
+      (blur)="onEnterKeyPress($event)"
+      [disabled]="disabled"
+    />
+    <mat-icon class="check" [class.hidden]="!isFilled">check</mat-icon>
+  </div>
+</div>

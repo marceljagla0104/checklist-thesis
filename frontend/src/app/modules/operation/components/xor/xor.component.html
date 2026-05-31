@@ -1,0 +1,30 @@
+<div *ngIf="children.length > 1">
+  <h2>{{ name }}</h2>
+  <form [formGroup]="formGroup">
+    <div *ngFor="let child of children">
+      <label for="xor-{{ child.id }}" class="xor-container" [ngClass]="{isDisabled: disabled}">
+        <input
+          id="xor-{{ child.id }}"
+          type="radio"
+          formControlName="selectedOption"
+          value="{{ child.pathDescription }}"
+          [ngClass]="{isDisabled: disabled}"
+          [disabled]="disabled"
+          (click)="setSelected(child.pathDescription)"
+        />
+        {{ child.pathDescription }}
+      </label>
+      <div *ngIf="getSuccessors(child.id).length > 0" class="successors">
+        {{ "FOLLOWING" | translate }} {{ getSuccessors(child.id) }}
+      </div>
+    </div>
+  </form>
+
+  <div *ngFor="let child of children">
+    <app-path
+      *ngIf="isChecked(child.pathDescription)"
+      [elements]="getPathElements(child.id)"
+      [path]="child.id"
+    ></app-path>
+  </div>
+</div>

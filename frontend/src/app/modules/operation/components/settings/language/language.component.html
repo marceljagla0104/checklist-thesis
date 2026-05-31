@@ -1,0 +1,6 @@
+<div class="language-settings">
+  <h2>{{'language' | translate}}</h2>
+  <select id="language" [(ngModel)]="selectedLanguage" (change)="changeLanguage()">
+    <option *ngFor="let language of languages" [value]="language">{{language | translate}}</option>
+  </select>
+</div>

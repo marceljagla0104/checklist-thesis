@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+mat-icon:hover {
+  cursor: pointer;
+}
+
+.recording {
+  color: red;
+}

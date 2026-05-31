@@ -1,0 +1,29 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  justify-content: space-between;
+  gap: 10px;
+  width: 100%;
+}
+
+label {
+  width: 500px;
+}
+
+input {
+  height: 30px;
+  width: 500px;
+}
+
+.isDisabled {
+  color: grey;
+}
+
+.hidden {
+  display: none;
+}
+
+mat-icon {
+  color: green;
+}

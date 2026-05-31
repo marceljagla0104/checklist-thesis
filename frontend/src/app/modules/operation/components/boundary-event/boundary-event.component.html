@@ -1,0 +1,20 @@
+<div class="container">
+  <!-- todo translate -->
+  <span> {{ "EVENT_OCCUR" | translate }}</span>
+  <label [class.disabled]="disabled">
+    <input
+      value="{{ name }}"
+      type="checkbox"
+      [disabled]="disabled"
+      [ngModel]="checked$ | async"
+      (change)="onChange()"
+    />
+    {{ name }}
+  </label>
+  <app-path
+    *ngIf="(checked$ | async) && elements.length > 0"
+    [elements]="elements"
+    [path]="id"
+  >
+  </app-path>
+</div>

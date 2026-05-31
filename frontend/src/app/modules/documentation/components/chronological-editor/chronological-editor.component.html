@@ -1,0 +1,84 @@
+<div *ngIf="entries" class="container" [class.disabled]="disabled">
+  <div *ngFor="let entry of entries" class="entry">
+    <div class="text">
+      <div
+        id="{{ entry.id }}"
+        [attr.contenteditable]="!disabled"
+        class="text-line"
+      >
+        <div *ngIf="entry.startedAt" class="description">
+          <div class="timestamp">
+            {{ entry.startedAt | date: "dd.MM.YYYY, HH:MM:ss" }}
+          </div>
+          <div>Start: {{ entry.getDescription() }}</div>
+        </div>
+
+        <div
+          *ngIf="entry.finishedAt"
+          class="description"
+          style="white-space: pre-line"
+        >
+          <div class="timestamp">
+            {{ entry.finishedAt | date: "dd.MM.YYYY, HH:MM:ss" }}
+          </div>
+          <div>
+            {{ entry.startedAt ? ("END" | translate) + ": " : ""
+            }}{{ entry.getDescription() }}
+          </div>
+        </div>
+      </div>
+
+      <div
+        *ngIf="imageExists(entry.elementId)"
+        id="image-{{ entry.id }}"
+        class="image"
+      >
+        <img [src]="getImage(entry.elementId)" />
+      </div>
+
+      <div *ngIf="entry.textEvent" class="entryText">
+        {{
+          entry.textEvent.length > 0
+            ? ("EVENT" | translate) + ": " + entry.textEvent
+            : ""
+        }}
+      </div>
+
+      <div *ngIf="audioExists(entry.elementId)" class="audio">
+        <audio
+          id="audio-{{ entry.id }}"
+          controls
+          [src]="buildAudioUrl(entry.elementId)"
+        ></audio>
+        <div id="audio-text-{{ entry.id }}" [attr.contenteditable]="!disabled">
+          {{ "DESCRIBE_AUDIO" | translate }}
+        </div>
+      </div>
+    </div>
+
+    <select
+      *ngIf="entry.phrases.length > 1"
+      [disabled]="disabled"
+      (change)="onSelectionChange($event, entry)"
+    >
+      <option>{{ entry.description }}</option>
+      <option *ngFor="let alt of entry.phrases" [value]="alt">
+        {{ alt }}
+      </option>
+    </select>
+  </div>
+</div>
+
+<div *ngIf="!disabled" class="controls">
+  <app-button (clickCallback)="save()" [disabled]="disabled">
+    {{ "SAVE_AND_FINISH" | translate }}
+  </app-button>
+
+  <app-button (click)="download()" [disabled]="disabled">
+    Download .docx
+  </app-button>
+
+  <app-button (clickCallback)="downloadWithoutTime()" [disabled]="disabled">
+    {{ "SAVE_WITHOUT_TIMES" | translate }}
+  </app-button>
+</div>

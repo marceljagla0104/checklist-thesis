@@ -1,0 +1,225 @@
+{
+  "id": "Process_110u6z1",
+  "heading": "Cochlear-Operation",
+  "subprocesses": [
+    {
+      "order": 5,
+      "name": "Nachbereitung",
+      "elements": [
+        {
+          "id": "Event1",
+          "type": "START_EVENT",
+          "inputType": "CHECKBOX",
+          "name": "Nachbereitung",
+          "textAnnotation": "",
+          "data": [],
+          "eventIds": [],
+          "pathIds": [],
+          "children": [
+            {
+              "id": "Task1",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Task1",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Hier ist eine Texteingabe",
+          "textAnnotation": "",
+          "data": [],
+          "eventIds": ["Event3", "Event4"],
+          "pathIds": [],
+          "children": [
+            {
+              "id": "Gateway0",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event3",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "TEXT",
+          "name": "Hier ist eine Texteingabe",
+          "textAnnotation": "Event3",
+          "data": [],
+          "eventIds": [],
+          "pathIds": ["Event3"],
+          "children": [
+            {
+              "id": "Task6",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event4",
+          "type": "BOUNDARY_EVENT",
+          "inputType": "TEXT",
+          "name": "Hier ist eine Texteingabe",
+          "textAnnotation": "Event4",
+          "data": [],
+          "eventIds": [],
+          "pathIds": ["Event4"],
+          "children": [
+            {
+              "id": "Task7",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Task6",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Hier ist eine Texteingabe",
+          "textAnnotation": "",
+          "data": [],
+          "eventIds": [],
+          "pathIds": ["Event3"],
+          "children": [
+            {
+              "id": "Gateway0",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Task7",
+          "type": "TASK",
+          "inputType": "TEXT",
+          "name": "Hier ist eine Texteingabe",
+          "textAnnotation": "",
+          "data": [],
+          "eventIds": [],
+          "pathIds": ["Event4"],
+          "children": [
+            {
+              "id": "Gateway0",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway0",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hier ist ein Xor",
+          "data": [],
+          "eventIds": [],
+          "pathIds": [],
+          "children": [
+            {
+              "id": "Gateway1",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway1",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hier ist ein Xor",
+          "data": [],
+          "eventIds": [],
+          "pathIds": [],
+          "children": [
+            {
+              "id": "Task3",
+              "pathDescription": "Pfad 1"
+            },
+            {
+              "id": "Task4",
+              "pathDescription": "Pfad 2"
+            }
+          ]
+        },
+        {
+          "id": "Task3",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Pfad 1",
+          "textAnnotation": "",
+          "data": [],
+          "eventIds": [],
+          "pathIds": [
+            "Task3"
+          ],
+          "children": [
+            {
+              "id": "Task5",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Task5",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Pfad 1.1",
+          "textAnnotation": "",
+          "data": [],
+          "eventIds": [],
+          "pathIds": [
+            "Task3"
+          ],
+          "children": [
+            {
+              "id": "Gateway2",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Task4",
+          "type": "TASK",
+          "inputType": "CHECKBOX",
+          "name": "Pfad2",
+          "textAnnotation": "",
+          "data": [],
+          "eventIds": [],
+          "pathIds": [
+            "Task4"
+          ],
+          "children": [
+            {
+              "id": "Gateway2",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Gateway2",
+          "type": "XOR",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "Hier ist ein Xor",
+          "data": [],
+          "eventIds": [],
+          "pathIds": [],
+          "children": [
+            {
+              "id": "Event2",
+              "pathDescription": ""
+            }
+          ]
+        },
+        {
+          "id": "Event2",
+          "type": "END_EVENT",
+          "inputType": "NONE",
+          "name": "",
+          "textAnnotation": "",
+          "data": [],
+          "pathIds": [],
+          "eventIds": [],
+          "children": []
+        }
+      ]
+    }
+  ]
+}

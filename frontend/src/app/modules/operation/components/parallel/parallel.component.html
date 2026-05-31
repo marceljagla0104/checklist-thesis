@@ -1,0 +1,8 @@
+<div *ngIf="children.length > 1">
+  <div *ngFor="let child of children">
+    <app-path
+      [elements]="getPathElements(child.id)"
+      [path]="child.id"
+    ></app-path>
+  </div>
+</div>

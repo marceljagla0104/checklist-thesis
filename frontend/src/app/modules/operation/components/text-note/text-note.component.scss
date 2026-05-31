@@ -1,0 +1,46 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  height: 100%;
+  border: solid 1px #ccc;
+  border-radius: 5px;
+  padding: 10px;
+
+}
+
+
+mat-icon:hover {
+  cursor: pointer;
+}
+
+.check {
+  color: green;
+}
+
+.check:hover {
+  cursor: default;
+}
+
+.input-field {
+  display: flex;
+
+  input {
+    flex-grow: 1;
+  }
+}
+
+.hidden {
+  display: none;
+}

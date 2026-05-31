@@ -1,0 +1,47 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+
+app-toast {
+  position: fixed;
+  bottom: 25px;
+  left: 50%;
+  transform: translateX(-50%)
+}
+
+.info {
+  font-size: 16px;
+  color: grey;
+}
+
+.back {
+  width: 100px;
+  bottom: 50px;
+  position: absolute;
+}
+
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  app-button {
+    width: 100%;
+  }
+}
+
+

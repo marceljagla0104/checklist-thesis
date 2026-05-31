@@ -1,0 +1,8 @@
+<mat-icon
+  *ngIf="!disabled"
+  (click)="recordAudio()"
+  [ngClass]="{ recording: isRecording }"
+  >mic
+</mat-icon>
+
+<audio *ngIf="audioURL$ | async as audioURL" controls [src]="audioURL"></audio>

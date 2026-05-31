@@ -1,0 +1,6 @@
+<app-page>
+  <app-circulating-task-table
+    *ngIf="tasks$ | async as tasks"
+    [tasks]="tasks"
+  ></app-circulating-task-table>
+</app-page>

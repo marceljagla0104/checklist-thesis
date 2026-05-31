@@ -1,0 +1,32 @@
+:host {
+  display: inline-block;
+}
+
+button {
+  background-color: cornflowerblue;
+  color: white;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.2), 0 0 6px rgba(0, 0, 0, 0.3) inset;
+  border-radius: 3px;
+
+
+  border: none;
+  cursor: pointer;
+  outline: none;
+  padding: 0.5rem;
+  transition: all 0.3s ease-in-out;
+
+  width: 100%;
+
+  &:active {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2), 0 0 1px rgba(0, 0, 0, 0.3) inset;
+  }
+
+  &:hover {
+    background-color: #3f8ae0;
+  }
+}
+
+.disabled {
+  background-color: lightgray;
+  color: black;
+}

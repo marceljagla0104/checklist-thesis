@@ -1,0 +1,13 @@
+<div
+  class="container"
+  [class.done]="done$ | async"
+  [class.started]="started$ | async"
+>
+  <mat-icon>record_voice_over </mat-icon>
+  <div>
+    {{ element.name }}
+  </div>
+  <div *ngIf="finishedAt$ | async as finishedAt">
+    {{ finishedAt | timestamp }}
+  </div>
+</div>

@@ -1,0 +1,36 @@
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.admin-button {
+  position: fixed;
+  right: 10px;
+  bottom: 10px;
+}
+
+.step {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+
+  app-button {
+    width: 100%;
+  }
+}
+
+.back {
+  width: 100px;
+  bottom: 50px;
+  position: absolute;
+}

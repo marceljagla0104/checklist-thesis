@@ -1,0 +1,8 @@
+<div class="container">
+  <app-button (click)="toggleCamera()" [disabled]="disabled"
+    >{{ "TAKE_PICTURE" | translate }}
+  </app-button>
+  <div>
+    <img *ngIf="image$ | async as image" [src]="image" height="400px" />
+  </div>
+</div>

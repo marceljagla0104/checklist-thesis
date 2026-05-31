@@ -1,0 +1,12 @@
+<div class="container">
+  <label for="{{ id }}" [ngClass]="{ isDisabled: disabled }">{{ name }}:</label>
+  <input
+    type="text"
+    id="{{ id }}"
+    [ngModel]="text$ | async"
+    [disabled]="disabled"
+    (keyup.enter)="onEnterKeyPress($event)"
+    (blur)="onEnterKeyPress($event)"
+  />
+  <mat-icon [class.hidden]="!isFilled">check</mat-icon>
+</div>

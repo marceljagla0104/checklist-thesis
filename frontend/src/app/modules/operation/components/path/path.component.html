@@ -1,0 +1,98 @@
+<!-- Loop through all elements of the path and render them -->
+<div *ngFor="let element of pathElements">
+  <!-- Check what type the current element is and render it accordingly-->
+  <div class="container" [ngSwitch]="element.type">
+    <div *ngSwitchCase="START_EVENT">
+      <app-start></app-start>
+    </div>
+
+    <div
+      *ngSwitchCase="XOR"
+      [style.display]="isHidden(element) ? 'none' : 'flex'"
+    >
+      <app-xor
+        [id]="element.id"
+        [children]="element.children"
+        [name]="element.name"
+        [paths]="getPathsForChildren(element.children)"
+        (showElements)="showElements($event)"
+      ></app-xor>
+    </div>
+
+    <div *ngSwitchCase="PARALLEL">
+      <app-parallel
+        [hidden]="isHidden(element)"
+        [children]="element.children"
+        [paths]="getPathsForChildren(element.children)"
+      ></app-parallel>
+    </div>
+
+    <div *ngSwitchCase="TASK">
+      <div
+        class="text-task"
+        *ngIf="element.inputType === TEXT"
+        [style.display]="isHidden(element) ? 'none' : 'flex'"
+      >
+        <app-text [id]="element.id" [name]="element.name"></app-text>
+      </div>
+
+      <div
+        class="checkbox-task"
+        *ngIf="
+          element.inputType === CHECKBOX && !element.roles.includes(CIRCULATING)
+        "
+        [style.display]="isHidden(element) ? 'none' : 'flex'"
+      >
+        <app-checkbox
+          [element]="element"
+          [paths]="getPaths(element.eventIds)"
+          [events]="getEvents(element.eventIds)"
+        ></app-checkbox>
+      </div>
+
+      <div
+        class="checkbox-task"
+        *ngIf="
+          element.inputType === CHECKBOX && element.roles.includes(CIRCULATING)
+        "
+        [style.display]="isHidden(element) ? 'none' : 'flex'"
+      >
+        <app-circulating-task [element]="element"></app-circulating-task>
+      </div>
+
+      <div
+        class="upload-task"
+        *ngIf="element.inputType === UPLOAD"
+        [style.display]="isHidden(element) ? 'none' : 'flex'"
+      >
+        <app-upload [id]="element.id" [name]="element.name"></app-upload>
+      </div>
+
+      <div
+        class="camera"
+        *ngIf="element.inputType === PICTURE"
+        [style.display]="isHidden(element) ? 'none' : 'flex'"
+      >
+        <app-camera [elementId]="element.id"></app-camera>
+      </div>
+
+      <div
+        *ngIf="element.inputType === HEADING"
+        [style.display]="isHidden(element) ? 'none' : 'flex'"
+      >
+        <h2>{{ element.name }}</h2>
+      </div>
+    </div>
+
+    <div
+      *ngSwitchCase="END_EVENT"
+      [style.display]="isHidden(element) ? 'none' : 'flex'"
+    >
+      <h2>Ende</h2>
+    </div>
+  </div>
+  <app-image
+    [element]="element"
+    [style.display]="isHidden(element) ? 'none' : 'flex'"
+  ></app-image>
+</div>

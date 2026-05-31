@@ -1,0 +1,10 @@
+<span>{{ "language" | translate }}</span>
+<select
+  id="language"
+  [(ngModel)]="selectedLanguage"
+  (change)="changeLanguage()"
+>
+  <option *ngFor="let language of languages" [value]="language">
+    {{ language | translate }}
+  </option>
+</select>

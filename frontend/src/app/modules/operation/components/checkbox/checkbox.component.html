@@ -1,0 +1,95 @@
+<div class="container">
+  <div class="checkbox-info-container">
+    <div *ngIf="startAndEndTime$ | async" class="checkbox-container">
+      <input
+        class="input-checkbox"
+        type="checkbox"
+        id="start{{ element.id }}"
+        [disabled]="disabled"
+        [ngModel]="startIsChecked$ | async"
+        (change)="onStartChange()"
+      />
+      <label
+        [ngClass]="{
+          isChecked: startIsChecked$ | async,
+          isDisabled: disabled,
+          isSkipped: (isSkipped$ | async) && !(startIsChecked$ | async)
+        }"
+        for="start{{ element.id }}"
+      >
+        Start {{ element.name }}
+      </label>
+      <div class="timestamp" *ngIf="startedAt$ | async as startedAt">
+        {{ startedAt | timestamp }}
+      </div>
+    </div>
+    <div class="checkbox-container">
+      <input
+        class="input-checkbox"
+        type="checkbox"
+        id="end{{ element.id }}"
+        [disabled]="disabled"
+        [ngModel]="endIsChecked$ | async"
+        (change)="onEndChange()"
+      />
+      <label
+        [ngClass]="{
+          isChecked: endIsChecked$ | async,
+          isDisabled: disabled,
+          isSkipped: (isSkipped$ | async) && !(endIsChecked$ | async)
+        }"
+        for="end{{ element.id }}"
+      >
+        <div>
+          {{ (startAndEndTime$ | async) ? ("END" | translate) : "" }}
+          {{ element.name }}
+        </div>
+      </label>
+      <div class="timestamp" *ngIf="finishedAt$ | async as finishedAt">
+        {{ finishedAt | timestamp }}
+      </div>
+    </div>
+
+    <div class="info" *ngIf="info" (click)="toggleInfo()">
+      <mat-icon>info_outline</mat-icon>
+      <div *ngIf="showInfo">
+        {{ info }}
+      </div>
+    </div>
+
+    <div *ngFor="let instrument of instruments" class="instruments">
+      <mat-icon>build</mat-icon>
+      {{ instrument }}
+    </div>
+  </div>
+  <div class="events">
+    <div
+      class="event-container"
+      *ngIf="(endIsChecked$ | async) && events.length !== 0"
+    >
+      <div *ngFor="let event of events">
+        <app-boundary-event
+          [id]="event.id"
+          [name]="event.name"
+          [elements]="paths.get(event.id)"
+          [disabled]="disabled"
+        ></app-boundary-event>
+      </div>
+    </div>
+
+    <div
+      *ngIf="(finishedAt$ | async) || (startedAt$ | async)"
+      class="note-container"
+    >
+      <app-text-note
+        (description)="addTextDescription($event)"
+        [text]="textEvent$ | async"
+        [disabled]="disabled"
+      ></app-text-note>
+      <app-audio-note
+        [elementId]="element.id"
+        [disabled]="disabled"
+      ></app-audio-note>
+    </div>
+  </div>
+</div>

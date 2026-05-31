@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>{{"SETTINGS" | translate}}</h2>
+<mat-dialog-content>
+  <div class="settings">
+    <app-settings-language
+      (language)="addLanguage($event)"
+    ></app-settings-language>
+    <app-settings-timestamp
+      *ngIf="!(role === 'CIRCULATING')"
+      (timestamp)="addTimestamp($event)"
+    ></app-settings-timestamp>
+  </div>
+</mat-dialog-content>
+<div class="divider"></div>
+<mat-dialog-actions>
+  <button mat-button class="action-button" (click)="onSave()">
+    {{ "SAVE" | translate}}
+  </button>
+  <button mat-button class="action-button" (click)="onCancel()">
+    {{"CANCEL" | translate}}
+  </button>
+</mat-dialog-actions>

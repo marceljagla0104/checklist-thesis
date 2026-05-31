@@ -1,0 +1,12 @@
+:host {
+  display: flex;
+  flex-direction: column;
+
+}
+
+select {
+  border: none;
+  padding: 10px;
+  background-color: white;
+  cursor: pointer;
+}

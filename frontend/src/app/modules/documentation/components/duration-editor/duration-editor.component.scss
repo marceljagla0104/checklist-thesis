@@ -1,0 +1,26 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  gap: 10px;
+}
+
+.editor {
+  font-size: 1.2rem;
+  font-family: 'Roboto', sans-serif;
+  border: none;
+  outline: none;
+  resize: none;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  white-space: pre-wrap;
+}
+
+.disabled {
+  color: grey;
+}
+
+app-button {
+  width: 150px;
+}

@@ -1,0 +1,17 @@
+<div *ngIf="!disabled" class="upload">
+  <app-button>
+    <label for="{{ id }}"
+      >{{ name }}
+      <mat-icon>file_upload</mat-icon>
+    </label>
+    <input
+      type="file"
+      id="{{ id }}"
+      accept=".txt"
+      hidden
+      (change)="onFileSelected($event)"
+    />
+  </app-button>
+</div>
+
+<pre class="file-content">{{ fileContent$ | async }}</pre>

@@ -1,0 +1,39 @@
+<app-page>
+  <div *ngIf="operation$ | async as process" class="container">
+    <h1>{{ process.heading }}</h1>
+
+    <div class="tabs">
+      <app-subprocess-tab
+        *ngFor="let subprocess of process.subprocesses"
+        (click)="selectTab(subprocess.name)"
+        [class.active]="subprocess.name === (selectedTab$ | async)"
+        [class.inactive]="subprocess.name !== (selectedTab$ | async)"
+        [name]="subprocess.name"
+      >
+      </app-subprocess-tab>
+      <app-subprocess-tab
+        *ngIf="hasSurgeonRole()"
+        (click)="selectTab('documentation')"
+        [class.active]="(selectedTab$ | async) === 'documentation'"
+        [class.inactive]="(selectedTab$ | async) !== 'documentation'"
+        name="{{ 'documentation' | translate }}"
+      ></app-subprocess-tab>
+    </div>
+
+    <div class="content" #content>
+      <app-subprocess
+        *ngFor="let subprocess of process.subprocesses"
+        [class.show]="subprocess.name === (selectedTab$ | async)"
+        [class.hide]="subprocess.name !== (selectedTab$ | async)"
+        [elements]="subprocess.elements"
+      >
+      </app-subprocess>
+      <app-documentation-overview
+        *ngIf="(selectedTab$ | async) === 'documentation'"
+        [title]="process.heading"
+      ></app-documentation-overview>
+    </div>
+  </div>
+
+  <app-call-circulating *ngIf="role === 'SURGEON'"></app-call-circulating>
+</app-page>
