@@ -16,4 +16,5 @@ public class CreateEntryReq {
     String textEvent;
     Instant startedAt;
     Instant finishedAt;
+    String intent;                  //The intent of the request, used to determine the processing logic
 }

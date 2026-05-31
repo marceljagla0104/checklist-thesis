@@ -138,4 +138,10 @@ public class DocumentationFacade {
                 entry.getCreatedAt()
         );
     }
+
+    public Mono<EntryDTO> executeControlAction(String documentationID, String roomId, CreateEntryReq req){
+
+
+        return Mono.empty();
+    }
 }
