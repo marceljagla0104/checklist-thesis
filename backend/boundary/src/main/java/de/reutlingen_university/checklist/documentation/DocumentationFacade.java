@@ -138,10 +138,20 @@ public class DocumentationFacade {
                 entry.getCreatedAt()
         );
     }
+    //Testfunktion für Steuerungs-Intents
+    public Mono<String> executeControlAction(String documentationID, String roomId, CreateEntryReq req){
+        //Konsolenausgaben für den Live-Test
+        System.out.println("==============================================================");
+        System.out.println("[DEBUG FUER DocumentationFacade] Funktion executeControlAction wurde erfolgreich getriggert!");
+        System.out.println("DocumentationID: " + documentationID);
+        System.out.println("RoomID: "+ roomId);
+        System.out.println("Intent: "+ req.getIntent());
+        System.out.println("ElementID: "+ req.getElementId());
+        System.out.println("Sprach-Event/Text: "+ req.getTextEvent());
+        System.out.println("==============================================================");
 
-    public Mono<EntryDTO> executeControlAction(String documentationID, String roomId, CreateEntryReq req){
 
-
-        return Mono.empty();
+        //Rueckgabe fiktiver ID damit System normal weiterläuft
+        return Mono.just("CONTROL_SUCCESS_executeControlAction_Test");
     }
 }

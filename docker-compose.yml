@@ -9,7 +9,7 @@ services:
       - mongodb-data:/data/db
   backend:
     container_name: "backend"
-    build: ./Backend/checklist/boundary
+    build: ./backend/boundary
     ports:
       - "8080:8080"
     depends_on:
@@ -24,8 +24,8 @@ services:
   frontend:
     container_name: "frontend"
     build:
-      context: ../../Frontend/checklist
-      dockerfile: ../../Frontend/checklist/Dockerfile
+      context: ./frontend
+      dockerfile: Dockerfile
     ports:
       - '80:80'
     depends_on:

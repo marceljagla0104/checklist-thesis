@@ -184,6 +184,7 @@ export class DocumentationService implements OnDestroy {
     startedAt?: Date,
     finishedAt?: Date,
     textEvent?: string,
+    intent?: string,      //neuer Parameter
   ): Observable<string> {
     const req = {
       elementId,
@@ -191,6 +192,7 @@ export class DocumentationService implements OnDestroy {
       description,
       startedAt,
       finishedAt,
+      intent,           //wird hier mit dem rest mitgeschickt
     };
     const roomId = window.sessionStorage.getItem('roomId');
     return this.http
