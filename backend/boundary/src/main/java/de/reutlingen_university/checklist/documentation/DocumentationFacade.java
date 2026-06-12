@@ -1,9 +1,11 @@
 package de.reutlingen_university.checklist.documentation;
 
 import de.reutlingen_university.checklist.OperationHandler;
+import de.reutlingen_university.checklist.operation.OperationView;
 import de.reutlingen_university.checklist.websockets.ChecklistWebsocketMsg;
 import de.reutlingen_university.checklist.sync.websockets.SessionService;
 import de.reutlingen_university.checklist.websockets.WebsocketMessageType;
+import de.reutlingen_university.checklist.operation.ElementView;
 import lombok.AllArgsConstructor;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
@@ -19,6 +21,8 @@ public class DocumentationFacade {
     private final DocumentationHandler handler;
     private final SessionService sessionService;
     private final OperationHandler operationHandler;
+
+    private final de.reutlingen_university.checklist.security.SecurityService securityService;
 
     // Returns a List of all unfinished documentations for the start view
     public Flux<DocumentationListItemDTO> listUnfinished(String operationId, String roomId) {
@@ -140,18 +144,106 @@ public class DocumentationFacade {
     }
     //Testfunktion für Steuerungs-Intents
     public Mono<String> executeControlAction(String documentationID, String roomId, CreateEntryReq req){
-        //Konsolenausgaben für den Live-Test
-        System.out.println("==============================================================");
-        System.out.println("[DEBUG FUER DocumentationFacade] Funktion executeControlAction wurde erfolgreich getriggert!");
-        System.out.println("DocumentationID: " + documentationID);
-        System.out.println("RoomID: "+ roomId);
-        System.out.println("Intent: "+ req.getIntent());
-        System.out.println("ElementID: "+ req.getElementId());
-        System.out.println("Sprach-Event/Text: "+ req.getTextEvent());
-        System.out.println("==============================================================");
+        System.out.println("[EXECUTECONTROLACTION DEBUG] Starte Kette für DocId. " + documentationID);
 
+        return handler.getDocumentation(documentationID)
+                .doOnNext(doc -> System.out.println("[EXECUTECONTROLACTION DEBUG] Doku gefunden: " + doc.getId()))
+                .switchIfEmpty(Mono.defer(() -> {
+                        System.out.println("[EXECUTECONTROLACTION DEBUG] Fehler: DOku mit ID " + documentationID + " nicht in DB gefunden!");
+                        return Mono.error(new Exception("Dokumentation nicht gefunden"));
+                }))
+                .flatMap(doc -> {
+                        System.out.println("[EXECUTECONTROLACTION DEBUG] Rufe jetzt isActionAllowed auf...");
+                        return isActionAllowed(documentationID, doc.getOperationId(), req.getRole(), req.getIntent(), req.getTextEvent()); 
+                })
+                .flatMap(allowed -> {
+                        if (!allowed){
+                                System.out.println("[GUARD] Zugriff verweigert: " + req.getRole() + " darf nicht " + req.getIntent() + " / " + req.getTextEvent() + " ausfuehren.");
+                                return Mono.error(new Exception("Berechtigung verweigert: Rolle "+ req.getRole() + " nicht autorisiert für diese Aktion."));
+                        }
+                        //Konsolenausgaben für den Live-Test
+                        System.out.println("==============================================================");
+                        System.out.println("[DEBUG FUER DocumentationFacade] Funktion executeControlAction wurde erfolgreich getriggert!");
+                        System.out.println("DocumentationID: " + documentationID);
+                        System.out.println("RoomID: "+ req.getRoomId());
+                        System.out.println("Role: "+req.getRole());
+                        System.out.println("Intent: "+ req.getIntent());
+                        System.out.println("ElementID: "+ req.getElementId());
+                        System.out.println("Sprach-Event/Text: "+ req.getTextEvent());
+                        System.out.println("==============================================================");
 
-        //Rueckgabe fiktiver ID damit System normal weiterläuft
-        return Mono.just("CONTROL_SUCCESS_executeControlAction_Test");
+                        String textEvent = req.getTextEvent();
+                        switch (textEvent) {
+                                case "ZOOM_CAMERA":
+                                        performCameraAction();
+                                        return this.sessionService.emitMsg(new ChecklistWebsocketMsg(
+                                                WebsocketMessageType.ENTRY_UPDATED,
+                                                documentationID,
+                                                roomId,
+                                                Map.of("action", "ZOOM_CAMERA", "status", "SUCCESS", "message", "Kamera-Steuerung wurde aktiviert.")
+                                        )).thenReturn("CONTROL_SUCCESS");
+                                case "UPDATE_NAME":
+                                        String patientName = req.getDescription() != null ? req.getDescription() : "Unbekannter Patient";
+                                        updatePatientName(documentationID, patientName);
+                                        return this.sessionService.emitMsg(new ChecklistWebsocketMsg(
+                                                WebsocketMessageType.ENTRY_UPDATED,
+                                                documentationID,
+                                                roomId,
+                                                Map.of("action", "UPDATE_NAME", "status", "SUCCESS", "patientName", patientName)
+                                        )). thenReturn("CONTROL_SUCCESS");
+                                        
+                                default:
+                                        System.out.println("Unbekannter Befehl: " + textEvent);
+                                        return Mono.just("CONTROL_UNKNOWN");
+                        }
+
+                });
+        
+
+    }
+    private void performCameraAction(){
+        System.out.println("[ACTION] Kamera-Steuerung wurde aktiviert.");
+    }
+    private void updatePatientName(String docId, String name){
+        System.out.println("[ACTION] Patient " + name + "in Dokumentation " + docId + "gespeichert.");
+    }
+
+    private Mono<Boolean> isActionAllowed(String documentationId, String operationId, String role, String intent, String action){
+        if(!"CONTROL_ACTION".equals(intent)){
+                return Mono.just(true);    
+        }
+
+        boolean isConfigAllowed = securityService.isActionAllowed(action, role);
+        if (!isConfigAllowed) {
+                System.out.println("[GUARD] Zugriff verweigert durch META.yaml: " + role + " darf nicht " + action);
+                return Mono.just(false);
+        }
+
+        return operationHandler.getOperationView(operationId)
+                .zipWith(handler.getDocumentation(documentationId))
+                .map(tuple -> !"FINISHED".equals(getActiveElementId(tuple.getT1(), tuple.getT2())))
+                .flatMap(isProcessAllowed -> {
+                        if (!isProcessAllowed) {
+                        System.out.println("[GUARD] Prozess-Check fehlgeschlagen (OP beendet).");
+                        return Mono.just(false);    
+                        } 
+                        System.out.println("[GUARD] Prüfung erfolgreich: Zugriff ERLAUBT.");
+                        return Mono.just(true);
+                });
+        }
+        
+
+    private String getActiveElementId(OperationView opView, Documentation doc){
+        List<ElementView> allElements = opView.getSubprocesses().stream()
+                .flatMap(sub -> sub.getElements().stream())
+                .toList();
+        for (ElementView element : allElements){
+                
+                if(!doc.getEntryIds().contains(element.getId())){
+                        return element.getId();
+                }
+        }
+        return "FINISHED";
+
     }
 }

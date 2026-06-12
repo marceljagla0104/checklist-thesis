@@ -1,0 +1,72 @@
+intentPermissions:
+  ZOOM_CAMERA:
+    allowedRoles: ["SURGEON"]
+    description: "Kamerasteuerung"
+  UPDATE_NAME:
+    allowedRoles: ["SURGEON", "SCRUB"]
+    description: "Namen aktualisieren"
+
+Activity_1vb5rmi:
+  SURGEON:
+    info: "s. Anästhesieprotokoll"
+Activity_1t7uixs:
+  SURGEON:
+    info: "zur Erinnerung"
+Activity_1dsr1np:
+  SURGEON:
+    info: "s. MEDICO"
+Activity_0gpse79:
+  SCRUB:
+    instruments:
+      - "Schablone"
+      - "Malstift"
+Activity_08eh7sn:
+  SCRUB:
+    instruments:
+      - "10er Skalpell"
+Activity_1yl4dg0:
+  SCRUB:
+    instruments:
+      - "Kompresse"
+      - "Bipolare Pinzette"
+Activity_0ruslbh:
+  SURGEON:
+    info: "zur späteren Fixierung des Implantats"
+Activity_0fifu74:
+  SCRUB:
+    instruments:
+      - "Zweizinkerhaken"
+      - "10er Skalpell"
+      - "chirurgische Pinzette"
+
+Activity_1wtfr2n:
+  STUDENT:
+    description: "Posteriore Tympanotomie (Eingehen in das Mittelohr über den Recessus facialis):
+        Nach dem Ausdünnen der hinteren Gehörgangswand werden der mastoidale Verlauf des N. facialis 
+        und die Chorda tympani dargestellt. Durch Wegnahme des Knochens zwischen N. Fazialis und Chorda 
+        tympani erfolgt die Eröffnung des Chorda-Fazialis-Winkels unter Schonung der beiden Nerven. 
+        Ein den kurzen Ambossfortsatz bedeckender Knochenpfeiler wird zum Schutz der Gehörknöchelchenkette erhalten."
+    images:
+      - file: posteriore_tympanotomie.png
+        caption: "Bildquelle:Cochlea Implant- state of the art, Thomas Lenarz, DOI http://dx.doi.org/10.1055/s-0043-101812 Laryngo-Rhino-Otol 2017; 96: S123–S151"
+Activity_01gjz2j:
+  SURGEON:
+    info: "Mit 1,0 Diamantbohrer in niedriger Umdrehung"
+Activity_1mb0afg:
+  SURGEON:
+    info: "Mit der Nadel"
+Activity_0yxv6fm:
+  SURGEON:
+    info: "Mit zuvor vorgelegtem Fixierungsfaden"
+Activity_0hu8bx7:
+  SURGEON:
+    info: "Bei kompletter Insertion"
+Activity_0pjq8h2:
+  SURGEON:
+    info: "Nachdem die Elektrode geladen wurde"
+Activity_0uz6hho:
+  SURGEON:
+    info: "Bis deckungsgleich mit Markierung"
+Activity_09f9fyv:
+  SURGEON:
+    info: "zur Erinnerung"

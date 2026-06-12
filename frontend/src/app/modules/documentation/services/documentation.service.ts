@@ -5,6 +5,7 @@ import {HttpClient} from '@angular/common/http';
 import {CreateDocumentationReq, DocumentationDTO, DocumentationListItemDTO,} from './api/documentation';
 import {map} from 'rxjs/operators';
 import {environment} from '../../../../environments/environment';
+import { UserContextService } from '../../shared/services/user-context.service';
 
 // service that handles documentation updates etc.
 // caches documentation on load, so it's only loaded once and then updated through websocket messages
@@ -13,7 +14,22 @@ export class DocumentationService implements OnDestroy {
   documentation$: ReplaySubject<Documentation> =
     new ReplaySubject<Documentation>(1); // caches the documentation
 
-  constructor(private http: HttpClient) {}
+  constructor(
+    private http: HttpClient,
+    private userContext: UserContextService
+  ){}
+
+  private activeDocumentationId: string | null=null;
+
+  setActiveDocumentationId(id: string){
+    this.activeDocumentationId = id;
+
+    localStorage.setItem('documentationId', id);
+  }
+
+  getActiveDocumentationId(): string | null {
+    return this.activeDocumentationId || localStorage.getItem('documentationId');
+  }
 
   ngOnDestroy(): void {
     this.documentation$.complete();
@@ -47,6 +63,7 @@ export class DocumentationService implements OnDestroy {
         `http://${this.baseUrl()}/documentation/${documentationId}`,
       )
       .pipe(
+        tap(() => this.setActiveDocumentationId(documentationId)),
         map((dto) => {
           const entries = dto.entries.map((entry) => {
             return new Entry(
@@ -193,6 +210,8 @@ export class DocumentationService implements OnDestroy {
       startedAt,
       finishedAt,
       intent,           //wird hier mit dem rest mitgeschickt
+      role: this.userContext.getCurrentRole(),
+      roomId: this.userContext.getCurrentRoomId(),
     };
     const roomId = window.sessionStorage.getItem('roomId');
     return this.http

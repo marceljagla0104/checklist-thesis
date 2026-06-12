@@ -7,6 +7,7 @@ import de.reutlingen_university.checklist.operation.ImageRepo;
 import de.reutlingen_university.checklist.operation.OperationRepo;
 import de.reutlingen_university.checklist.operation.SubprocessRepo;
 import de.reutlingen_university.checklist.operation.meta.MetaDataRepo;
+import de.reutlingen_university.checklist.security.SecurityService;
 import de.reutlingen_university.checklist.sync.websockets.SessionService;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -25,7 +26,8 @@ public class DocumentationConfig {
             ElementRepo elementRepo,
             SubprocessRepo subprocessRepo,
             MetaDataRepo metaDataRepo,
-            ImageRepo imageRepo
+            ImageRepo imageRepo,
+            SecurityService securityService
     ) {
         DocumentationHandler handler = new DocumentationHandler(
                 entryRepo,
@@ -44,6 +46,6 @@ public class DocumentationConfig {
                 elementPhraseRepo
         );
 
-        return new DocumentationFacade(handler, sessionService, operationHandler);
+        return new DocumentationFacade(handler, sessionService, operationHandler, securityService);
     }
 }

@@ -24,22 +24,24 @@ public class DocumentationRestHandler {
 
     public Mono<ServerResponse> createEntry(ServerRequest serverRequest) {
     String documentationId = serverRequest.pathVariable("documentationId");
-    String roomId = serverRequest.pathVariable("roomId");
 
     return serverRequest.bodyToMono(CreateEntryReq.class)
         .flatMap(req -> {
+            System.out.println("[DOCUMENTATIONRESTHANDLER DEBUG] Intent Empfangen: " + req.getIntent() + "'");
             // Intent-Weiche: Unterscheidung zwischen Standard-Dokumentation und Steuerungsbefehl
             if ("CONTROL_ACTION".equalsIgnoreCase(req.getIntent())) {
+                System.out.println("[DOCUMENTATIONRESTHANDLER DEBUG] Intent erkannt, delegiere an executeControlAction...");
                 // AF-3: Delegierung an Steuerungs-Logik (muss in Facade implementiert werden)
-                return facade.executeControlAction(documentationId, roomId, req);
+                return facade.executeControlAction(documentationId, req.getRoomId(), req);
             } else {
+                System.out.println("[DOCUMENTATIONRESTHANDLER DEBUG] Intent nicht erkannt, nutze standard-pfad");
                 // AF-3: Standard-Pfad: Dokumentations-Eintrag erstellen
-                return facade.createOrUpdateEntry(documentationId, roomId, req);
+                return facade.createOrUpdateEntry(documentationId, req.getRoomId(), req);
             }
         })
         .flatMap(result -> ServerResponse.ok().bodyValue(result))
         .onErrorResume(err -> ServerResponse.badRequest().bodyValue("Fehler bei der Intent-Verarbeitung: " + err.getMessage()));
-}
+    }
 
     public Mono<ServerResponse> listUnfinished(ServerRequest serverRequest) {
         String operationId = serverRequest.pathVariable("operationId");

@@ -21,19 +21,32 @@ export class ButtonComponent {
 
 triggerControlAction() {
     console.log("Button geklickt - Sende Intent...");
+    const successSound = new Audio('assets/sounds/success.mp3');
+    const activeDocId = this.docService.getActiveDocumentationId();
+
+    if (!activeDocId){
+      console.error("Fehler: Keine aktive Dokumentation im Service gefunden!");
+      return;
+    }
     
-    // Wir rufen die Funktion auf, die wir gerade im Service gebaut haben
+    console.log("Button geklickt - Sende Intent für Doku-ID", activeDocId);
+
     this.docService.createOrUpdateEntry(
-      '123',              // documentationId (Wichtig: Diese ID muss in deiner DB existieren!)
+      activeDocId,              // documentationId 
       'test-element-01',  // elementId
-      'Kamera Steuerung', // description
+      'Kamera zoomen', // description
       undefined,          // startedAt
       undefined,          // finishedAt
       'ZOOM_CAMERA',      // textEvent
-      'CONTROL_ACTION'    // <--- DAS IST DER WICHTIGE INTENT!
+      'CONTROL_ACTION'    // intent
     ).subscribe({
-      next: (res: any) => console.log('Erfolg:', res),
-      error: (err: any) => console.error('Fehler:', err)
+      next: (res: any) => {
+        console.log('Erfolg:', res);
+        successSound.play().catch(err => console.error("Sound konnte nicht abgespielt werden: ", err));
+      },
+      error: (err: any) => {
+        console.error('Fehler:', err);
+      }
     });
   }
 }
