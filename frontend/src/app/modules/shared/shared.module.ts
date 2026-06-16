@@ -7,6 +7,8 @@ import {
   TimestampComponent,
   ToastComponent,
 } from './components';
+
+import { SoundSettingsComponent } from '../operation/components/settings/sound/sound.settings.component';
 import { SettingsDialog } from './dialogs';
 import { MatDialogModule } from '@angular/material/dialog';
 import { TranslateModule } from '@ngx-translate/core';
@@ -23,6 +25,7 @@ const COMPONENTS = [
   TimestampComponent,
   LanguageComponent,
   ToastComponent,
+  SoundSettingsComponent,
 ];
 const DIALOGS = [SettingsDialog];
 

@@ -1,0 +1,7 @@
+<div class="sound-settings">
+  <h2>{{ 'SETTINGS_AUDIO_TITLE' | translate }}</h2>
+  <label>
+    <input type="checkbox" [(ngModel)]="errorSoundEnabled" (change)="toggleErrorSound()">
+    {{ 'SETTINGS_AUDIO_ERROR_TOGGLE' | translate }}
+  </label>
+</div>

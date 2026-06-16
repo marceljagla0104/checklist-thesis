@@ -35,5 +35,8 @@
   "SAVED_AT": "Finished at",
   "TEMPLATES": "Templates",
   "NO_OPERATIONS": "No operations",
-  "SAVE_AND_FINISH": "Save and finish operation"
+  "SAVE_AND_FINISH": "Save and finish operation",
+  "SETTINGS_AUDIO_TITLE": "Audio Settings",
+  "SETTINGS_AUDIO_ERROR_TOGGLE": "Enable error sound when permission is missing or errer in speach recognition",
+  "SETTINGS_AUDIO_SUCCESS": "Audio settings successfully updated"
 }

@@ -37,5 +37,9 @@
   "SAVED_AT": "Abgeschlossen um",
   "TEMPLATES": "Vorlagen",
   "NO_OPERATIONS": "Keine Operationen vorhanden",
-  "SAVE_AND_FINISH": "Speichern und Operation abschließen"
+  "SAVE_AND_FINISH": "Speichern und Operation abschließen",
+  "SETTINGS_AUDIO_TITLE": "Audio-Einstellung",
+  "SETTINGS_AUDIO_ERROR_TOGGLE": "Fehlerton bei fehlender Berechtigung oder Sprachbefehl error",
+  "SETTINGS_AUDIO_SUCCESS": "Audio-Einstellung erfolgreich aktualisiert"
+
 }
