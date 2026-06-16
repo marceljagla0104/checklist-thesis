@@ -49,7 +49,7 @@ triggerControlAction() {
         console.error('Fehler:', err);
 
         const savedSetting = localStorage.getItem('errorSoundEnabled');             //Wert wird aus dem localstorage der anwendung gelesen... -> so wie timestamp und language einstellungen die bereits vorhanden waren
-        const isErrorSoundEnabled = (savedSetting != 'false');                      //Sound ist nur aus wenn wircklich auf false gesetzt... wenn an oder noch nie gesetzt spielt der sound
+        const isErrorSoundEnabled = (savedSetting != 'false');                      //Sound ist nur aus wenn wircklich auf false gesetzt... -> wenn an oder noch nie gesetzt spielt der sound
 
         if (isErrorSoundEnabled){
           errorSound.play().catch(soundErr => console.error("Error-Sound konnte nicht abgespielt werden: ", soundErr));
