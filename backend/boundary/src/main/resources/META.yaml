@@ -5,6 +5,12 @@ intentPermissions:
   UPDATE_NAME:
     allowedRoles: ["SURGEON", "SCRUB"]
     description: "Namen aktualisieren"
+  NEXT_STEP:
+    allowedRoles: ["SURGEON","SCRUB","SPRINGER"]
+    description: "Wechsel zum naechsten Schritt"
+  ADD_COMMENT:
+    allowedRoles: ["SURGEON","SCRUB","SPRINGER"]
+    description: "Notiz zum aktuellen Schritt"
 
 Activity_1vb5rmi:
   SURGEON:

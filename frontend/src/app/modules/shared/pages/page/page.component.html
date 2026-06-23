@@ -1,5 +1,15 @@
 <div class="header">
   <div>Surgical Process Checklist</div>
+  
+  <div class="voice-control-container">
+    <span class="voice-status-label" [class.active]="isRecording">
+      {{ isRecording ? '🎤 SYSTEM LAUSCHT...' : '🎙️ Sprachsteuerung bereit' }}
+    </span>
+    
+    <button class="voice-trigger-btn" (click)="toggleRecording()" [class.recording]="isRecording">
+      {{ isRecording ? '🛑 Stop' : '🎙️ Start' }}
+    </button>
+  </div>
 </div>
 
 <div class="content">
