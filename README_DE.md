@@ -57,10 +57,10 @@ Das User-Interface erfasst Audiodaten transient über ein Push-to-Talk-Verfahren
 - Befehle im Ordner "frontend" ausführen:
     cd frontend
     npm install
-    ng serve
+    npm start
 - Öffnen Sie anschließend http://localhost:4200 im Browser.
 
 
 ### Alternativ
-Im Hauptverzeichniss findet sich eine .bat datei
+Im Hauptverzeichniss findet sich eine start_all_services.bat datei. Installation muss abgeschlossen sein bevor start_all_services.bat funktioniert. Danach einfach Docker-Desktop starten und auf start_all_services.bat drücken.
 
