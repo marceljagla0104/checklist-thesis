@@ -141,12 +141,12 @@ public class DocumentationFacade {
 
     // Funktion für Steuerungs-Intents (VUI Integration)
     public Mono<String> executeControlAction(String documentationID, String roomId, CreateEntryReq req){
-        System.out.println("[EXECUTECONTROLACTION DEBUG] Starte Kette für DocId. " + documentationID);
+        System.out.println("[EXECUTECONTROLACTION DEBUG] Starte Kette fuer DocId. " + documentationID);
 
         return handler.getDocumentation(documentationID)
                 .doOnNext(doc -> System.out.println("[EXECUTECONTROLACTION DEBUG] Doku gefunden: " + doc.getId()))
                 .switchIfEmpty(Mono.defer(() -> {
-                        System.out.println("[EXECUTECONTROLACTION DEBUG] Fehler: DOku mit ID " + documentationID + " nicht in DB gefunden!");
+                        System.out.println("[EXECUTECONTROLACTION DEBUG] Fehler: Doku mit ID " + documentationID + " nicht in DB gefunden!");
                         return Mono.error(new Exception("Dokumentation nicht gefunden"));
                 }))
                 .flatMap(doc -> { 
@@ -161,12 +161,18 @@ public class DocumentationFacade {
 
                                         System.out.println("==============================================================");
                                         System.out.println("[DEBUG FUER DocumentationFacade] Funktion executeControlAction wurde erfolgreich getriggert!");
+                                        System.out.println("DocumentationID: " + documentationID);
+                                        System.out.println("RoomID: " + roomId);
+                                        System.out.println("Intent: " + req.getIntent());
+                                        System.out.println("ElementID: " + req.getElementId());
+                                        System.out.println("Rolle: " +req.getRole());
+                                        System.out.println("Sprach-Event/Text" + req.getTextEvent());
                                         System.out.println("==============================================================");
 
                                         String textEvent = req.getTextEvent();
                                         switch (textEvent) {
                                                 case "ZOOM_CAMERA":
-                                                        System.out.println("[BPMN ENGINE] Sprachbefehl 'ZOOM_CAMERA' erhalten für Doc-ID: " + documentationID);
+                                                        System.out.println("[BPMN ENGINE] Sprachbefehl 'ZOOM_CAMERA' erhalten fuer Doc-ID: " + documentationID);
                                                         performCameraAction();
                                                         return this.sessionService.emitMsg(new ChecklistWebsocketMsg(
                                                                 WebsocketMessageType.ENTRY_UPDATED,
@@ -176,7 +182,7 @@ public class DocumentationFacade {
                                                         )).thenReturn("CONTROL_SUCCESS");
 
                                                 case "UPDATE_NAME":
-                                                        System.out.println("[BPMN ENGINE] Sprachbefehl 'UPDATE_NAME' erhalten für Doc-ID: " + documentationID);
+                                                        System.out.println("[BPMN ENGINE] Sprachbefehl 'UPDATE_NAME' erhalten fuer Doc-ID: " + documentationID);
                                                         String patientName = req.getDescription() != null ? req.getDescription() : "Unbekannter Patient";
                                                         updatePatientName(documentationID, patientName);
                                                         return this.sessionService.emitMsg(new ChecklistWebsocketMsg(

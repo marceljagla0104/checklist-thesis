@@ -30,12 +30,11 @@ public class DocumentationRestHandler {
             System.out.println("[DOCUMENTATIONRESTHANDLER DEBUG] Intent Empfangen: " + req.getIntent() + "'");
             // Intent-Weiche: Unterscheidung zwischen Standard-Dokumentation und Steuerungsbefehl
             if ("CONTROL_ACTION".equalsIgnoreCase(req.getIntent())) {
-                System.out.println("[DOCUMENTATIONRESTHANDLER DEBUG] Intent erkannt, delegiere an executeControlAction...");
-                // AF-3: Delegierung an Steuerungs-Logik (muss in Facade implementiert werden)
+                System.out.println("[DOCUMENTATIONRESTHANDLER DEBUG] Intent erkannt, leite an executeControlAction weiter...");
                 return facade.executeControlAction(documentationId, req.getRoomId(), req);
             } else {
                 System.out.println("[DOCUMENTATIONRESTHANDLER DEBUG] Intent nicht erkannt, nutze standard-pfad");
-                // AF-3: Standard-Pfad: Dokumentations-Eintrag erstellen
+                // Dokumentations-Eintrag erstellen
                 return facade.createOrUpdateEntry(documentationId, req.getRoomId(), req);
             }
         })

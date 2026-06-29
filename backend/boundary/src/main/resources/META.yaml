@@ -9,7 +9,7 @@ intentPermissions:
     allowedRoles: ["SURGEON","SCRUB","SPRINGER"]
     description: "Wechsel zum naechsten Schritt"
   ADD_COMMENT:
-    allowedRoles: ["SURGEON","SCRUB","SPRINGER"]
+    allowedRoles: ["SURGEON","SCRUB","SPRINGER","STUDENT"]
     description: "Notiz zum aktuellen Schritt"
 
 Activity_1vb5rmi:
